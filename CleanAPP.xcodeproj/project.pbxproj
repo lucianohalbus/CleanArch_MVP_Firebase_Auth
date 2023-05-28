@@ -13,6 +13,7 @@
 		CB49235E2A22CF4900541CA8 /* RemoteAddAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB49235D2A22CF4900541CA8 /* RemoteAddAccountTests.swift */; };
 		CB4923672A22CF7500541CA8 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4923412A22CD0F00541CA8 /* Domain.framework */; };
 		CB4923682A22CF7500541CA8 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB4923412A22CD0F00541CA8 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB49236D2A22E0C000541CA8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB49236C2A22E0C000541CA8 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		CB4923512A22CF4900541CA8 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4923582A22CF4900541CA8 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB49235D2A22CF4900541CA8 /* RemoteAddAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountTests.swift; sourceTree = "<group>"; };
+		CB49236C2A22E0C000541CA8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		CB4923422A22CD0F00541CA8 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				CB49236C2A22E0C000541CA8 /* Model.swift */,
 				CB4923482A22CDBF00541CA8 /* AddAccount.swift */,
 				CB49234A2A22CED200541CA8 /* AccountModel.swift */,
 			);
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB49236D2A22E0C000541CA8 /* Model.swift in Sources */,
 				CB4923492A22CDBF00541CA8 /* AddAccount.swift in Sources */,
 				CB49234B2A22CED200541CA8 /* AccountModel.swift in Sources */,
 			);
