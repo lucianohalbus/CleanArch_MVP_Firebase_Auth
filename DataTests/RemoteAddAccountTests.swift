@@ -13,7 +13,6 @@ class RemoteAddAccount {
     
     func add() {
         httpClient.post(url: url)
-        
     }
 }
 
@@ -29,17 +28,16 @@ final class RemoteAddAccountTests: XCTestCase {
         let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
         sut.add()
         XCTAssertEqual(httpClientSpy.url, url)
-       
     }
-    
+
+}
+
+extension RemoteAddAccountTests {
     class HttpclientSpy: HttpPostClient {
         var url: URL?
         
         func post(url: URL) {
-            self.url = url        }
-        
-        
+            self.url = url
+        }
     }
-
-
 }
