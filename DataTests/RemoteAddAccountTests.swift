@@ -13,12 +13,13 @@ class RemoteAddAccount {
     }
     
     func add(addAccountModel: AddAccountModel) {
-        httpClient.post(url: url)
+        let data = try? JSONEncoder().encode(addAccountModel)
+        httpClient.post(to: url, with: data)
     }
 }
 
 protocol HttpPostClient {
-    func post(url: URL)
+    func post(to url: URL, with data: Data?)
 }
 
 final class RemoteAddAccountTests: XCTestCase {
@@ -27,16 +28,29 @@ final class RemoteAddAccountTests: XCTestCase {
         let url: URL = URL(string: "http://any-url.com")!
         let httpClientSpy = HttpclientSpy()
         let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
-        sut.add()
-        XCTAssertEqual(httpClientSpy.data, data)
+        let addAccountModel: AddAccountModel = AddAccountModel(
+            name: "anyName",
+            email: "anyEmail",
+            password: "anyPassword",
+            passwordConfirmation: "anyPassword"
+        )
+        sut.add(addAccountModel: addAccountModel)
+        XCTAssertEqual(httpClientSpy.url, url)
     }
     
     func test_add_should_call_httpClient_with_corret_data() throws {
-
+        let url: URL = URL(string: "http://any-url.com")!
         let httpClientSpy = HttpclientSpy()
         let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
-        sut.add()
-        XCTAssertEqual(httpClientSpy.url, url)
+        let addAccountModel: AddAccountModel = AddAccountModel(
+            name: "anyName",
+            email: "anyEmail",
+            password: "anyPassword",
+            passwordConfirmation: "anyPassword"
+        )
+        let data = try? JSONEncoder().encode(addAccountModel)
+        sut.add(addAccountModel: addAccountModel)
+        XCTAssertEqual(httpClientSpy.data, data)
     }
 
 }
@@ -44,9 +58,11 @@ final class RemoteAddAccountTests: XCTestCase {
 extension RemoteAddAccountTests {
     class HttpclientSpy: HttpPostClient {
         var url: URL?
+        var data: Data?
         
-        func post(url: URL) {
+        func post(to url: URL, with data: Data?) {
             self.url = url
+            self.data = data
         }
     }
 }
