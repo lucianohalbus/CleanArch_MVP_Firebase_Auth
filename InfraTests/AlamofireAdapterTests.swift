@@ -21,10 +21,7 @@ class AlamofireAdapterTests: XCTestCase {
 
     func test_post_should_make_request_with_valid_url_and_method() {
         let url = makeURL()
-        let configuration = URLSessionConfiguration.default
-        configuration.protocolClasses = [UrlProtocolStrub.self]
-        let session = Session(configuration: configuration)
-        let sut = AlamofireAdapter(session: session)
+        let sut = makeSut()
         sut.post(to: url, with: makeValidDate())
         let exp = expectation(description: "waiting")
         UrlProtocolStrub.observeRequest { request in
@@ -37,12 +34,8 @@ class AlamofireAdapterTests: XCTestCase {
     }
     
     func test_post_should_make_request_with_no_data() {
-        let url = makeURL()
-        let configuration = URLSessionConfiguration.default
-        configuration.protocolClasses = [UrlProtocolStrub.self]
-        let session = Session(configuration: configuration)
-        let sut = AlamofireAdapter(session: session)
-        sut.post(to: url, with: nil)
+        let sut = makeSut()
+        sut.post(to: makeURL(), with: nil)
         let exp = expectation(description: "waiting")
         UrlProtocolStrub.observeRequest { request in
             XCTAssertNil(request.httpBodyStream)
@@ -52,6 +45,14 @@ class AlamofireAdapterTests: XCTestCase {
     }
 }
 
+extension AlamofireAdapterTests {
+    func makeSut() -> AlamofireAdapter {
+        let configuration = URLSessionConfiguration.default
+        configuration.protocolClasses = [UrlProtocolStrub.self]
+        let session = Session(configuration: configuration)
+        return AlamofireAdapter(session: session)
+    }
+}
 
 class UrlProtocolStrub: URLProtocol {
     static var emit: ((URLRequest) -> Void)?
