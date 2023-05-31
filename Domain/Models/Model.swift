@@ -3,7 +3,7 @@
 import Foundation
 
 
-public protocol Model: Encodable {}
+public protocol Model: Equatable, Codable {}
 
 
 public extension Model {
