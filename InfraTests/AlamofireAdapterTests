@@ -1,0 +1,13 @@
+//
+
+import XCTest
+@testable import Infra
+
+final class AlamofireAdapterTests: XCTestCase {
+
+    
+    func test_() throws {
+       
+    }
+
+}

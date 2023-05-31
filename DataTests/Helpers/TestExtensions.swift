@@ -8,6 +8,5 @@ extension XCTestCase {
         addTeardownBlock { [weak instance] in
             XCTAssertNil(instance, file: file, line: line)
         }
-        
     }
 }
