@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB222E6E2A27CB8E00F01870 /* AlamofireAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB222E6D2A27CB8E00F01870 /* AlamofireAdapterTests.swift */; };
 		CB4923492A22CDBF00541CA8 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4923482A22CDBF00541CA8 /* AddAccount.swift */; };
 		CB49234B2A22CED200541CA8 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB49234A2A22CED200541CA8 /* AccountModel.swift */; };
 		CB4923592A22CF4900541CA8 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4923512A22CF4900541CA8 /* Data.framework */; };
@@ -24,7 +25,11 @@
 		CBDEDC622A27BFDB004908F6 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDEDC612A27BFDB004908F6 /* HttpClientSpy.swift */; };
 		CBDEDC642A27C038004908F6 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDEDC632A27C038004908F6 /* AccountModelFactory.swift */; };
 		CBDEDC722A27C735004908F6 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDEDC6A2A27C735004908F6 /* Infra.framework */; };
-		CBDEDC772A27C735004908F6 /* AlamofireAdapterTests in Sources */ = {isa = PBXBuildFile; fileRef = CBDEDC762A27C735004908F6 /* AlamofireAdapterTests */; };
+		CBDEDC7F2A27C805004908F6 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4923512A22CF4900541CA8 /* Data.framework */; };
+		CBDEDC802A27C805004908F6 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB4923512A22CF4900541CA8 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CBDEDC842A27C82E004908F6 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDEDC5C2A27BEF1004908F6 /* TestExtensions.swift */; };
+		CBDEDC852A27C837004908F6 /* TestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDEDC5E2A27BF4E004908F6 /* TestFactory.swift */; };
+		CBDEDC882A27C920004908F6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CBDEDC872A27C920004908F6 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,13 @@
 			remoteGlobalIDString = CBDEDC692A27C735004908F6;
 			remoteInfo = Infra;
 		};
+		CBDEDC812A27C805004908F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB4923292A22CC4E00541CA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB4923502A22CF4900541CA8;
+			remoteInfo = Data;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,9 +75,21 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CBDEDC832A27C805004908F6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CBDEDC802A27C805004908F6 /* Data.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CB222E6D2A27CB8E00F01870 /* AlamofireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterTests.swift; sourceTree = "<group>"; };
 		CB4923412A22CD0F00541CA8 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4923482A22CDBF00541CA8 /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
 		CB49234A2A22CED200541CA8 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -84,7 +108,6 @@
 		CBDEDC632A27C038004908F6 /* AccountModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModelFactory.swift; sourceTree = "<group>"; };
 		CBDEDC6A2A27C735004908F6 /* Infra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDEDC712A27C735004908F6 /* InfraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBDEDC762A27C735004908F6 /* AlamofireAdapterTests */ = {isa = PBXFileReference; lastKnownFileType = text; path = AlamofireAdapterTests; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBDEDC882A27C920004908F6 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBDEDC7F2A27C805004908F6 /* Data.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +302,7 @@
 		CBDEDC752A27C735004908F6 /* InfraTests */ = {
 			isa = PBXGroup;
 			children = (
-				CBDEDC762A27C735004908F6 /* AlamofireAdapterTests */,
+				CB222E6D2A27CB8E00F01870 /* AlamofireAdapterTests.swift */,
 			);
 			path = InfraTests;
 			sourceTree = "<group>";
@@ -323,6 +348,9 @@
 			dependencies = (
 			);
 			name = Domain;
+			packageProductDependencies = (
+				CBDEDC872A27C920004908F6 /* Alamofire */,
+			);
 			productName = Domain;
 			productReference = CB4923412A22CD0F00541CA8 /* Domain.framework */;
 			productType = "com.apple.product-type.framework";
@@ -373,10 +401,12 @@
 				CBDEDC662A27C735004908F6 /* Sources */,
 				CBDEDC672A27C735004908F6 /* Frameworks */,
 				CBDEDC682A27C735004908F6 /* Resources */,
+				CBDEDC832A27C805004908F6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CBDEDC822A27C805004908F6 /* PBXTargetDependency */,
 			);
 			name = Infra;
 			productName = Infra;
@@ -439,6 +469,9 @@
 				Base,
 			);
 			mainGroup = CB4923282A22CC4E00541CA8;
+			packageReferences = (
+				CBDEDC862A27C920004908F6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = CB4923332A22CC4E00541CA8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -536,7 +569,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBDEDC772A27C735004908F6 /* AlamofireAdapterTests in Sources */,
+				CBDEDC852A27C837004908F6 /* TestFactory.swift in Sources */,
+				CB222E6E2A27CB8E00F01870 /* AlamofireAdapterTests.swift in Sources */,
+				CBDEDC842A27C82E004908F6 /* TestExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +592,11 @@
 			isa = PBXTargetDependency;
 			target = CBDEDC692A27C735004908F6 /* Infra */;
 			targetProxy = CBDEDC732A27C735004908F6 /* PBXContainerItemProxy */;
+		};
+		CBDEDC822A27C805004908F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB4923502A22CF4900541CA8 /* Data */;
+			targetProxy = CBDEDC812A27C805004908F6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1013,6 +1053,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CBDEDC862A27C920004908F6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CBDEDC872A27C920004908F6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBDEDC862A27C920004908F6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CB4923292A22CC4E00541CA8 /* Project object */;
 }
