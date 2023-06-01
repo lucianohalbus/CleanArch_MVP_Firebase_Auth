@@ -20,6 +20,7 @@
 		CB5CDAD22A241A3F007052DD /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CDAD12A241A3E007052DD /* DomainError.swift */; };
 		CB5CDAD52A241C1B007052DD /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CDAD42A241C1B007052DD /* HttpError.swift */; };
 		CBAA93062A26C9860061B688 /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA93052A26C9860061B688 /* ExtensionHelpers.swift */; };
+		CBC4CBB22A28E3DC007EC4C3 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC4CBB12A28E3DC007EC4C3 /* AlamofireAdapter.swift */; };
 		CBDEDC5D2A27BEF1004908F6 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDEDC5C2A27BEF1004908F6 /* TestExtensions.swift */; };
 		CBDEDC5F2A27BF4E004908F6 /* TestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDEDC5E2A27BF4E004908F6 /* TestFactory.swift */; };
 		CBDEDC622A27BFDB004908F6 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDEDC612A27BFDB004908F6 /* HttpClientSpy.swift */; };
@@ -102,6 +103,7 @@
 		CB5CDAD12A241A3E007052DD /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		CB5CDAD42A241C1B007052DD /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		CBAA93052A26C9860061B688 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
+		CBC4CBB12A28E3DC007EC4C3 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		CBDEDC5C2A27BEF1004908F6 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		CBDEDC5E2A27BF4E004908F6 /* TestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactory.swift; sourceTree = "<group>"; };
 		CBDEDC612A27BFDB004908F6 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
@@ -274,6 +276,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		CBC4CBB32A28E471007EC4C3 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				CBC4CBB12A28E3DC007EC4C3 /* AlamofireAdapter.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
 		CBDEDC5B2A27BED0004908F6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +305,7 @@
 		CBDEDC6B2A27C735004908F6 /* Infra */ = {
 			isa = PBXGroup;
 			children = (
+				CBC4CBB32A28E471007EC4C3 /* Http */,
 			);
 			path = Infra;
 			sourceTree = "<group>";
@@ -454,6 +465,7 @@
 					};
 					CBDEDC692A27C735004908F6 = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 					CBDEDC702A27C735004908F6 = {
 						CreatedOnToolsVersion = 14.3;
@@ -562,6 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC4CBB22A28E3DC007EC4C3 /* AlamofireAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -898,6 +911,7 @@
 		CBDEDC7A2A27C735004908F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -924,6 +938,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -931,6 +946,7 @@
 		CBDEDC7B2A27C735004908F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -964,6 +980,7 @@
 		CBDEDC7D2A27C735004908F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5C55LM56SH;
@@ -981,6 +998,7 @@
 		CBDEDC7E2A27C735004908F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5C55LM56SH;
