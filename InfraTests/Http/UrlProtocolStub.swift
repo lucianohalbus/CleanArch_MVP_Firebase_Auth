@@ -2,21 +2,21 @@
 
 import Foundation
 
-class UrlProtocolStrub: URLProtocol {
+class UrlProtocolStub: URLProtocol {
     static var emit: ((URLRequest) -> Void)?
     static var data: Data?
     static var response: HTTPURLResponse?
     static var error: Error?
     
     static func observeRequest(completion: @escaping (URLRequest) -> Void) {
-        UrlProtocolStrub.emit = completion
+        UrlProtocolStub.emit = completion
         
     }
     
     static func simulate(data: Data?, response: HTTPURLResponse?, error: Error?) {
-        UrlProtocolStrub.data = data
-        UrlProtocolStrub.response = response
-        UrlProtocolStrub.error = error
+        UrlProtocolStub.data = data
+        UrlProtocolStub.response = response
+        UrlProtocolStub.error = error
     }
     
     override open class func canInit(with request: URLRequest) -> Bool {
@@ -28,14 +28,14 @@ class UrlProtocolStrub: URLProtocol {
     }
     
     override open func startLoading() {
-        UrlProtocolStrub.emit?(request)
-        if let data = UrlProtocolStrub.data {
+        UrlProtocolStub.emit?(request)
+        if let data = UrlProtocolStub.data {
             client?.urlProtocol(self, didLoad: data)
         }
-        if let response = UrlProtocolStrub.response {
+        if let response = UrlProtocolStub.response {
             client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
         }
-        if let error = UrlProtocolStrub.error {
+        if let error = UrlProtocolStub.error {
             client?.urlProtocol(self, didFailWithError: error)
         }
         client?.urlProtocolDidFinishLoading(self)

@@ -60,7 +60,7 @@ class AlamofireAdapterTests: XCTestCase {
 extension AlamofireAdapterTests {
     func makeSut(file: StaticString = #file, line: UInt = #line) -> AlamofireAdapter {
         let configuration = URLSessionConfiguration.default
-        configuration.protocolClasses = [UrlProtocolStrub.self]
+        configuration.protocolClasses = [UrlProtocolStub.self]
         let session = Session(configuration: configuration)
         let sut = AlamofireAdapter(session: session)
         checkMemoryLeak(for: sut, file: file, line: line)
@@ -72,14 +72,14 @@ extension AlamofireAdapterTests {
         let exp = expectation(description: "waiting")
         sut.post(to: url, with: data) { _ in exp.fulfill() }
         var request: URLRequest?
-        UrlProtocolStrub.observeRequest { request = $0 }
+        UrlProtocolStub.observeRequest { request = $0 }
         wait(for:  [exp], timeout: 1)
         action(request!)
     }
     
     func expectResult(_ expectedResult: Result<Data?, HttpError>, when stub: (data: Data?, response: HTTPURLResponse?, error: Error?), file: StaticString = #file, line: UInt = #line) {
         let sut = makeSut()
-        UrlProtocolStrub.simulate(data: stub.data, response: stub.response, error: stub.error)
+        UrlProtocolStub.simulate(data: stub.data, response: stub.response, error: stub.error)
         let exp = expectation(description: "waiting")
         sut.post(to: makeURL(), with: makeValidData()) { receivedResult in
             switch (expectedResult, receivedResult) {
