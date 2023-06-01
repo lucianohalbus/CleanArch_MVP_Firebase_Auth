@@ -3,10 +3,10 @@
 import Foundation
 
 func makeInvalidDate() -> Data {
-    return Data("".utf8)
+    return Data("invalid_data".utf8)
 }
 
-func makeValidDate() -> Data {
+func makeValidData() -> Data {
     return Data("{\"name\":\"Rodrigo\"}".utf8)
 }
 
@@ -16,4 +16,8 @@ func makeURL() -> URL {
 
 func makeError() -> Error {
     return NSError(domain: "any_error", code: 0)
+}
+
+func makeHttpResponse(statusCode: Int = 200) -> HTTPURLResponse {
+    return HTTPURLResponse(url: makeURL(), statusCode: statusCode, httpVersion: nil, headerFields: nil)!
 }
