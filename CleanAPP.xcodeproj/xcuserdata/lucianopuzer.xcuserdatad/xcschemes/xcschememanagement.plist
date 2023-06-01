@@ -42,6 +42,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>CBDEDC692A27C735004908F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CBDEDC702A27C735004908F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>
