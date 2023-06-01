@@ -31,7 +31,7 @@ public final class AlamofireAdapter: HttpPostClient {
                 case 500...599:
                     completion(.failure(.serverError))
                 default:
-                    completion(.success(data))
+                    completion(.failure(.noConnectivity))
                 }
             }
         }
