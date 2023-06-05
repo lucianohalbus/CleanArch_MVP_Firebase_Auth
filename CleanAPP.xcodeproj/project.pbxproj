@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CB222E6E2A27CB8E00F01870 /* AlamofireAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB222E6D2A27CB8E00F01870 /* AlamofireAdapterTests.swift */; };
 		CB28DF152A2E62040099788C /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB28DF0D2A2E62040099788C /* Presentation.framework */; };
-		CB28DF1A2A2E62040099788C /* SignupPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB28DF192A2E62040099788C /* SignupPresenterTests.swift */; };
+		CB28DF1A2A2E62040099788C /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB28DF192A2E62040099788C /* SignUpPresenterTests.swift */; };
 		CB4923492A22CDBF00541CA8 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4923482A22CDBF00541CA8 /* AddAccount.swift */; };
 		CB49234B2A22CED200541CA8 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB49234A2A22CED200541CA8 /* AccountModel.swift */; };
 		CB4923592A22CF4900541CA8 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4923512A22CF4900541CA8 /* Data.framework */; };
@@ -126,7 +126,7 @@
 		CB222E6D2A27CB8E00F01870 /* AlamofireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterTests.swift; sourceTree = "<group>"; };
 		CB28DF0D2A2E62040099788C /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB28DF142A2E62040099788C /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB28DF192A2E62040099788C /* SignupPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenterTests.swift; sourceTree = "<group>"; };
+		CB28DF192A2E62040099788C /* SignUpPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTests.swift; sourceTree = "<group>"; };
 		CB4923412A22CD0F00541CA8 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4923482A22CDBF00541CA8 /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
 		CB49234A2A22CED200541CA8 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -230,7 +230,7 @@
 		CB28DF182A2E62040099788C /* PresentationTests */ = {
 			isa = PBXGroup;
 			children = (
-				CB28DF192A2E62040099788C /* SignupPresenterTests.swift */,
+				CB28DF192A2E62040099788C /* SignUpPresenterTests.swift */,
 			);
 			path = PresentationTests;
 			sourceTree = "<group>";
@@ -747,7 +747,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB28DF1A2A2E62040099788C /* SignupPresenterTests.swift in Sources */,
+				CB28DF1A2A2E62040099788C /* SignUpPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
