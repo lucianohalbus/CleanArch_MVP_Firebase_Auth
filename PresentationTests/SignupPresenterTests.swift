@@ -13,7 +13,6 @@ class SighUpPresenter {
         if viewModel.name == nil || viewModel.name!.isEmpty {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha na Validação", message: "O campo nome é obrigatório"))
         }
-        
     }
 }
 
@@ -36,8 +35,7 @@ public struct SignUpViewModel {
 final class SignUpPresenterTests: XCTestCase {
 
     func test_signUp_should_show_error_message_if_name_is_not_provided() {
-        let alertViewSpy = AlertViewSpy()
-        let sut = SighUpPresenter(alertView: alertViewSpy)
+        let (sut, alertViewSpy) = makeSut()
         let signUpViewModel = SignUpViewModel(email: "any_email@mail.com", password: "any_password", passwordConfirmation: "any_password")
         sut.signUp(viewModel: signUpViewModel)
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha na Validação", message: "O campo nome é obrigatório"))
@@ -46,6 +44,12 @@ final class SignUpPresenterTests: XCTestCase {
 }
 
 extension SignUpPresenterTests {
+    func makeSut() -> (sut: SighUpPresenter, AlertViewSpy: AlertViewSpy) {
+        let alertViewSpy = AlertViewSpy()
+        let sut = SighUpPresenter(alertView: alertViewSpy)
+        return (sut, alertViewSpy)
+    }
+    
     class AlertViewSpy: AlertView {
         var viewModel: AlertViewModel?
         
