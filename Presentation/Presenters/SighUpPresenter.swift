@@ -4,15 +4,18 @@ import Foundation
 
 public class SighUpPresenter {
     private let alertView: AlertView
-
-    public init(alertView: AlertView) {
+    private let emailValidator: EmailValidator
+    
+    public init(alertView: AlertView, emailValidator: EmailValidator) {
         self.alertView = alertView
+        self.emailValidator = emailValidator
     }
     
     public func signUp(viewModel: SignUpViewModel) {
         if let message = validate(viewModel: viewModel) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha na Validação", message: message))
         }
+        _ = emailValidator.isValid(email: viewModel.email ?? "" )
     }
     
     private func validate(viewModel: SignUpViewModel) -> String? {
@@ -35,7 +38,6 @@ public class SighUpPresenter {
         if viewModel.password != viewModel.passwordConfirmation {
             return "Falha ao confirmar senha"
         }
-        
         return nil
     }
 }
