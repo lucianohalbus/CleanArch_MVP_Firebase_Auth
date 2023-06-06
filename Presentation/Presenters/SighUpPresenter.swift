@@ -31,13 +31,13 @@ public class SighUpPresenter {
         }
         
         if viewModel.passwordConfirmation == nil || viewModel.passwordConfirmation!.isEmpty {
-            return "O campo confimar senha é obrigatório"
+            return "O campo confirmar senha é obrigatório"
         }
         
         if viewModel.password != viewModel.passwordConfirmation {
-            return "Falha ao confirmar senha"
+            return "O campo confirmar senha é inválido"
         } else if !emailValidator.isValid(email: viewModel.email ?? "") {
-            return "Email invalido."
+            return "O campo Email é inválido"
         }
         return nil
     }
