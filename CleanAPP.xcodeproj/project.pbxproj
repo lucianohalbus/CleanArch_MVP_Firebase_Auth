@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CB15720F2A2F697C00ED22B5 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDEDC5C2A27BEF1004908F6 /* TestExtensions.swift */; };
 		CB1572112A2F6B7100ED22B5 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1572102A2F6B7100ED22B5 /* LoadingView.swift */; };
+		CB1572142A2F9B1C00ED22B5 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1572132A2F9B1C00ED22B5 /* SignUpViewModel.swift */; };
 		CB222E6E2A27CB8E00F01870 /* AlamofireAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB222E6D2A27CB8E00F01870 /* AlamofireAdapterTests.swift */; };
 		CB28DF152A2E62040099788C /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB28DF0D2A2E62040099788C /* Presentation.framework */; };
 		CB28DF1A2A2E62040099788C /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB28DF192A2E62040099788C /* SignUpPresenterTests.swift */; };
@@ -150,6 +151,7 @@
 
 /* Begin PBXFileReference section */
 		CB1572102A2F6B7100ED22B5 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		CB1572132A2F9B1C00ED22B5 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		CB222E6D2A27CB8E00F01870 /* AlamofireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterTests.swift; sourceTree = "<group>"; };
 		CB28DF0D2A2E62040099788C /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB28DF142A2E62040099788C /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +253,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB1572122A2F9ADF00ED22B5 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				CB28DF222A2E6C090099788C /* SighUpPresenter.swift */,
+				CB1572132A2F9B1C00ED22B5 /* SignUpViewModel.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		CB28DF0E2A2E62040099788C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,7 +300,7 @@
 		CB28DF2F2A2E6DAC0099788C /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				CB28DF222A2E6C090099788C /* SighUpPresenter.swift */,
+				CB1572122A2F9ADF00ED22B5 /* SignUp */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -812,6 +823,7 @@
 			files = (
 				CB28DF232A2E6C090099788C /* SighUpPresenter.swift in Sources */,
 				CB1572112A2F6B7100ED22B5 /* LoadingView.swift in Sources */,
+				CB1572142A2F9B1C00ED22B5 /* SignUpViewModel.swift in Sources */,
 				CB28DF2D2A2E6D080099788C /* AlertView.swift in Sources */,
 				CB28DF322A2E70700099788C /* EmailValidator.swift in Sources */,
 			);
