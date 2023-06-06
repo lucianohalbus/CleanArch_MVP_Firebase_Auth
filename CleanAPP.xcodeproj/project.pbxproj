@@ -41,6 +41,7 @@
 		CBDEDC842A27C82E004908F6 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDEDC5C2A27BEF1004908F6 /* TestExtensions.swift */; };
 		CBDEDC852A27C837004908F6 /* TestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDEDC5E2A27BF4E004908F6 /* TestFactory.swift */; };
 		CBDEDC882A27C920004908F6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CBDEDC872A27C920004908F6 /* Alamofire */; };
+		CBF42CA42A2F4EAC001A82B8 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDEDC632A27C038004908F6 /* AccountModelFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -815,6 +816,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBF42CA42A2F4EAC001A82B8 /* AccountModelFactory.swift in Sources */,
 				CB28DF1A2A2E62040099788C /* SignUpPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
