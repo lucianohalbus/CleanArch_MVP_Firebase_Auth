@@ -28,6 +28,7 @@ public final class SighUpPresenter {
                 case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "Algo inexperado aconteceu, tente novamente em alguns instantes."))
                 case .success: break
                 }
+                self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
             }
         }
     }
