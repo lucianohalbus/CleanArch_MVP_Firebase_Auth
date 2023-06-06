@@ -5,7 +5,7 @@ import Data
 import Alamofire
 import Infra
 
-class AlamofireAdapterTests: XCTestCase {
+final class AlamofireAdapterTests: XCTestCase {
     
     func test_post_should_make_request_with_valid_url_and_methd() {
         let url = makeURL()

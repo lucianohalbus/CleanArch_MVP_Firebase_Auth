@@ -3,7 +3,7 @@
 import Foundation
 import Domain
 
-public class SighUpPresenter {
+public final class SighUpPresenter {
     private let alertView: AlertView
     private let emailValidator: EmailValidator
     private let addAccount: AddAccount
@@ -19,7 +19,8 @@ public class SighUpPresenter {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha na Validação", message: message))
         } else {
             let addAccountModel = AddAccountModel(name: viewModel.name!, email: viewModel.email!, password: viewModel.password!, passwordConfirmation: viewModel.passwordConfirmation!)
-            addAccount.add(addAccountModel: addAccountModel) { result in
+            addAccount.add(addAccountModel: addAccountModel) { [weak self] result in
+                guard let self = self else { return }
                 switch result {
                 case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "Algo inexperado aconteceu, tente novamente em alguns instantes."))
                 case .success: break

@@ -1,8 +1,8 @@
 //
 
 import XCTest
-import Presentation
 import Domain
+import Presentation
 
 final class SignUpPresenterTests: XCTestCase {
 
@@ -129,8 +129,9 @@ extension SignUpPresenterTests {
 //        return (sut, alertViewSpy, emailValidatorSpy)
 //    }
     // refact to avoid multiple parameters inside tuple
-    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccountSpy = AddAccountSpy()) -> SighUpPresenter {
+    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccountSpy = AddAccountSpy(), file: StaticString = #file, line: UInt = #line) -> SighUpPresenter {
         let sut = SighUpPresenter(alertView: alertView, emailValidator: emailValidator, addAccount: addAccount)
+        checkMemoryLeak(for: sut, file: file, line: line)
         return sut
     }
     
