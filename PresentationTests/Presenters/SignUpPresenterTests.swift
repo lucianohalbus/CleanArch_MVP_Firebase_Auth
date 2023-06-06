@@ -109,6 +109,13 @@ final class SignUpPresenterTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
     
+    func test_signUp_should_show_loading_before_call_addAccount() {
+        let loadingViewSpy = LoadingViewSpy()
+        let sut = makeSut(loadingView: loadingViewSpy)
+        sut.signUp(viewModel: makeSignUpViewModel())
+        XCTAssertEqual(loadingViewSpy.viewModel, LoadingViewModel(isLoading: true))
+    }
+    
     
 // test returning tuple
 //    func test_signUp_should_show_error_message_if_invalidEmail_is_provider() {
@@ -129,8 +136,8 @@ extension SignUpPresenterTests {
 //        return (sut, alertViewSpy, emailValidatorSpy)
 //    }
     // refact to avoid multiple parameters inside tuple
-    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccountSpy = AddAccountSpy(), file: StaticString = #file, line: UInt = #line) -> SighUpPresenter {
-        let sut = SighUpPresenter(alertView: alertView, emailValidator: emailValidator, addAccount: addAccount)
+    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccountSpy = AddAccountSpy(), loadingView: LoadingViewSpy = LoadingViewSpy(), file: StaticString = #file, line: UInt = #line) -> SighUpPresenter {
+        let sut = SighUpPresenter(alertView: alertView, emailValidator: emailValidator, addAccount: addAccount, loadingView: loadingView)
         checkMemoryLeak(for: sut, file: file, line: line)
         return sut
     }
@@ -189,6 +196,14 @@ extension SignUpPresenterTests {
         
         func completeWithError(_ error: DomainError) {
             completion?(.failure(error))
+        }
+    }
+    
+    class LoadingViewSpy: LoadingView {
+        var viewModel: LoadingViewModel?
+        
+        func display(viewModel: LoadingViewModel) {
+            self.viewModel = viewModel
         }
     }
 }

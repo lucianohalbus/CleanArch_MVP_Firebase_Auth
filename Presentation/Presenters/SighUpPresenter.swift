@@ -7,17 +7,20 @@ public final class SighUpPresenter {
     private let alertView: AlertView
     private let emailValidator: EmailValidator
     private let addAccount: AddAccount
+    private let loadingView: LoadingView
     
-    public init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount) {
+    public init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount, loadingView: LoadingView) {
         self.alertView = alertView
         self.emailValidator = emailValidator
         self.addAccount = addAccount
+        self.loadingView = loadingView
     }
     
     public func signUp(viewModel: SignUpViewModel) {
         if let message = validate(viewModel: viewModel) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha na Validação", message: message))
         } else {
+            loadingView.display(viewModel: LoadingViewModel(isLoading: true))
             let addAccountModel = AddAccountModel(name: viewModel.name!, email: viewModel.email!, password: viewModel.password!, passwordConfirmation: viewModel.passwordConfirmation!)
             addAccount.add(addAccountModel: addAccountModel) { [weak self] result in
                 guard let self = self else { return }
