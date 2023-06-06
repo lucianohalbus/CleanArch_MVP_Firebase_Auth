@@ -19,7 +19,12 @@ public class SighUpPresenter {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha na Validação", message: message))
         } else {
             let addAccountModel = AddAccountModel(name: viewModel.name!, email: viewModel.email!, password: viewModel.password!, passwordConfirmation: viewModel.passwordConfirmation!)
-            addAccount.add(addAccountModel: addAccountModel) { _ in }
+            addAccount.add(addAccountModel: addAccountModel) { result in
+                switch result {
+                case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "Algo inexperado aconteceu, tente novamente em alguns instantes."))
+                case .success: break
+                }
+            }
         }
     }
     
