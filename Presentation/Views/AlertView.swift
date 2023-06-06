@@ -15,4 +15,3 @@ public struct AlertViewModel: Equatable {
         self.message = message
     }
 }
-
