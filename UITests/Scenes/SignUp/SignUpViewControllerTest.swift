@@ -3,6 +3,7 @@
 import XCTest
 import UIKit
 import Presentation
+@testable import UI
 
 final class SignUpViewControllerTest: XCTestCase {
     

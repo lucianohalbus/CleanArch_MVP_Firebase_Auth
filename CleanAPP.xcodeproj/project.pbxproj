@@ -39,9 +39,9 @@
 		CB5CDAD52A241C1B007052DD /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CDAD42A241C1B007052DD /* HttpError.swift */; };
 		CB655AA92A2FFD7C008D46DE /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB28DF0D2A2E62040099788C /* Presentation.framework */; };
 		CB655AAA2A2FFD7C008D46DE /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB28DF0D2A2E62040099788C /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CB655B142A30003B008D46DE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB655AAE2A2FFFEA008D46DE /* SignUpViewController.swift */; };
 		CB655B172A3000FB008D46DE /* SignUP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB655B162A3000FB008D46DE /* SignUP.storyboard */; };
 		CB655B1B2A30B82D008D46DE /* SignUP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB655B162A3000FB008D46DE /* SignUP.storyboard */; };
+		CB6C35622A30EDB600E4A68A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C35612A30EDB600E4A68A /* SignUpViewController.swift */; };
 		CBAA93062A26C9860061B688 /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA93052A26C9860061B688 /* ExtensionHelpers.swift */; };
 		CBC254242A290370005C6F81 /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC254232A290370005C6F81 /* AddAccountIntegrationTests.swift */; };
 		CBC254252A290370005C6F81 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4923512A22CF4900541CA8 /* Data.framework */; };
@@ -217,9 +217,9 @@
 		CB4923702A22E21B00541CA8 /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
 		CB5CDAD12A241A3E007052DD /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		CB5CDAD42A241C1B007052DD /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
-		CB655AAE2A2FFFEA008D46DE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = UI/SignUp/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		CB655B162A3000FB008D46DE /* SignUP.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUP.storyboard; sourceTree = "<group>"; };
 		CB655B1A2A300999008D46DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CB6C35612A30EDB600E4A68A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CBAA93052A26C9860061B688 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
 		CBC2541B2A28E8AF005C6F81 /* Data.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Data.xctestplan; sourceTree = "<group>"; };
 		CBC2541C2A28EAF3005C6F81 /* CI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI.xctestplan; sourceTree = "<group>"; };
@@ -569,7 +569,7 @@
 		CB655B202A30ECF5008D46DE /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				CB655AAE2A2FFFEA008D46DE /* SignUpViewController.swift */,
+				CB6C35612A30EDB600E4A68A /* SignUpViewController.swift */,
 				CB655B162A3000FB008D46DE /* SignUP.storyboard */,
 			);
 			path = SignUp;
@@ -912,6 +912,7 @@
 				TargetAttributes = {
 					CB15722A2A2FA3A800ED22B5 = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 					CB1572312A2FA3A800ED22B5 = {
 						CreatedOnToolsVersion = 14.3;
@@ -1056,6 +1057,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB6C35622A30EDB600E4A68A /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1063,7 +1065,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB655B142A30003B008D46DE /* SignUpViewController.swift in Sources */,
 				CB1572382A2FA3A800ED22B5 /* SignUpViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1221,6 +1222,7 @@
 		CB15723B2A2FA3A800ED22B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1251,6 +1253,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1259,6 +1262,7 @@
 		CB15723C2A2FA3A800ED22B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1297,6 +1301,7 @@
 		CB15723E2A2FA3A800ED22B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5C55LM56SH;
@@ -1318,6 +1323,7 @@
 		CB15723F2A2FA3A800ED22B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5C55LM56SH;
