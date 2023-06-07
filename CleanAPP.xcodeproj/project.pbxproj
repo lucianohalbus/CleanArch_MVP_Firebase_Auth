@@ -43,6 +43,7 @@
 		CB655B1B2A30B82D008D46DE /* SignUP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB655B162A3000FB008D46DE /* SignUP.storyboard */; };
 		CB6C35622A30EDB600E4A68A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C35612A30EDB600E4A68A /* SignUpViewController.swift */; };
 		CB6C35652A30EE9D00E4A68A /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C35642A30EE9D00E4A68A /* TestExtensions.swift */; };
+		CB6C35682A30FF0000E4A68A /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C35672A30FF0000E4A68A /* UIViewControllerExtensions.swift */; };
 		CBAA93062A26C9860061B688 /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA93052A26C9860061B688 /* ExtensionHelpers.swift */; };
 		CBC254242A290370005C6F81 /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC254232A290370005C6F81 /* AddAccountIntegrationTests.swift */; };
 		CBC254252A290370005C6F81 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4923512A22CF4900541CA8 /* Data.framework */; };
@@ -222,6 +223,7 @@
 		CB655B1A2A300999008D46DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CB6C35612A30EDB600E4A68A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CB6C35642A30EE9D00E4A68A /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		CB6C35672A30FF0000E4A68A /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		CBAA93052A26C9860061B688 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
 		CBC2541B2A28E8AF005C6F81 /* Data.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Data.xctestplan; sourceTree = "<group>"; };
 		CBC2541C2A28EAF3005C6F81 /* CI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI.xctestplan; sourceTree = "<group>"; };
@@ -564,6 +566,7 @@
 		CB655B152A300055008D46DE /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CB6C35662A30FED700E4A68A /* Helpers */,
 				CB655B222A30ED46008D46DE /* Scenes */,
 			);
 			path = UI;
@@ -606,6 +609,14 @@
 			isa = PBXGroup;
 			children = (
 				CB6C35642A30EE9D00E4A68A /* TestExtensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CB6C35662A30FED700E4A68A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CB6C35672A30FF0000E4A68A /* UIViewControllerExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1068,6 +1079,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB6C35682A30FF0000E4A68A /* UIViewControllerExtensions.swift in Sources */,
 				CB6C35622A30EDB600E4A68A /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
