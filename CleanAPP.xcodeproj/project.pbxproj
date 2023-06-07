@@ -50,6 +50,7 @@
 		CB6C358A2A310CB500E4A68A /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB28DF0D2A2E62040099788C /* Presentation.framework */; };
 		CB6C358B2A310CB500E4A68A /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB28DF0D2A2E62040099788C /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB6C35912A31123B00E4A68A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CB6C35902A31123B00E4A68A /* Alamofire */; };
+		CB6C35932A31184200E4A68A /* EmailValidatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C35922A31184200E4A68A /* EmailValidatorAdapter.swift */; };
 		CBAA93062A26C9860061B688 /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA93052A26C9860061B688 /* ExtensionHelpers.swift */; };
 		CBC254242A290370005C6F81 /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC254232A290370005C6F81 /* AddAccountIntegrationTests.swift */; };
 		CBC254252A290370005C6F81 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4923512A22CF4900541CA8 /* Data.framework */; };
@@ -258,6 +259,7 @@
 		CB6C35702A310AEF00E4A68A /* Validation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Validation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6C35772A310AEF00E4A68A /* ValidationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValidationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6C357C2A310AEF00E4A68A /* EmailValidatorAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapterTests.swift; sourceTree = "<group>"; };
+		CB6C35922A31184200E4A68A /* EmailValidatorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapter.swift; sourceTree = "<group>"; };
 		CBAA93052A26C9860061B688 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
 		CBC2541B2A28E8AF005C6F81 /* Data.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Data.xctestplan; sourceTree = "<group>"; };
 		CBC2541C2A28EAF3005C6F81 /* CI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI.xctestplan; sourceTree = "<group>"; };
@@ -679,6 +681,7 @@
 		CB6C35712A310AEF00E4A68A /* Validation */ = {
 			isa = PBXGroup;
 			children = (
+				CB6C35922A31184200E4A68A /* EmailValidatorAdapter.swift */,
 			);
 			path = Validation;
 			sourceTree = "<group>";
@@ -1074,6 +1077,7 @@
 					};
 					CB6C356F2A310AEF00E4A68A = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 					CB6C35762A310AEF00E4A68A = {
 						CreatedOnToolsVersion = 14.3;
@@ -1297,6 +1301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB6C35932A31184200E4A68A /* EmailValidatorAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1973,6 +1978,7 @@
 		CB6C35802A310AEF00E4A68A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2002,6 +2008,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2010,6 +2017,7 @@
 		CB6C35812A310AEF00E4A68A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2047,6 +2055,7 @@
 		CB6C35832A310AEF00E4A68A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5C55LM56SH;
@@ -2065,6 +2074,7 @@
 		CB6C35842A310AEF00E4A68A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5C55LM56SH;
