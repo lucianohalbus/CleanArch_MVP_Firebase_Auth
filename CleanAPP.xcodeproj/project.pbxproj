@@ -217,7 +217,7 @@
 		CB4923702A22E21B00541CA8 /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
 		CB5CDAD12A241A3E007052DD /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		CB5CDAD42A241C1B007052DD /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
-		CB655AAE2A2FFFEA008D46DE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = UI/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
+		CB655AAE2A2FFFEA008D46DE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = UI/SignUp/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		CB655B162A3000FB008D46DE /* SignUP.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUP.storyboard; sourceTree = "<group>"; };
 		CB655B1A2A300999008D46DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CBAA93052A26C9860061B688 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
@@ -373,7 +373,7 @@
 		CB1572362A2FA3A800ED22B5 /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				CB1572372A2FA3A800ED22B5 /* SignUpViewControllerTest.swift */,
+				CB655B232A30ED56008D46DE /* Scenes */,
 			);
 			path = UITests;
 			sourceTree = "<group>";
@@ -561,10 +561,42 @@
 		CB655B152A300055008D46DE /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CB655B222A30ED46008D46DE /* Scenes */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CB655B202A30ECF5008D46DE /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
 				CB655AAE2A2FFFEA008D46DE /* SignUpViewController.swift */,
 				CB655B162A3000FB008D46DE /* SignUP.storyboard */,
 			);
-			path = UI;
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		CB655B212A30ED0E008D46DE /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				CB1572372A2FA3A800ED22B5 /* SignUpViewControllerTest.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		CB655B222A30ED46008D46DE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CB655B202A30ECF5008D46DE /* SignUp */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CB655B232A30ED56008D46DE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CB655B212A30ED0E008D46DE /* SignUp */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		CBAA93042A26C9500061B688 /* Helpers */ = {
