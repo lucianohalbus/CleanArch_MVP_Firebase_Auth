@@ -19,6 +19,7 @@
 		CB1572332A2FA3A800ED22B5 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB15722B2A2FA3A800ED22B5 /* UI.framework */; };
 		CB1572382A2FA3A800ED22B5 /* SignUpViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1572372A2FA3A800ED22B5 /* SignUpViewControllerTest.swift */; };
 		CB1F226E2A411BDE00014989 /* userLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F226D2A411BDE00014989 /* userLogin.swift */; };
+		CB1F22702A411E4E00014989 /* UserLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F226F2A411E4E00014989 /* UserLoginModel.swift */; };
 		CB222E6E2A27CB8E00F01870 /* AlamofireAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB222E6D2A27CB8E00F01870 /* AlamofireAdapterTests.swift */; };
 		CB28DF152A2E62040099788C /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB28DF0D2A2E62040099788C /* Presentation.framework */; };
 		CB28DF1A2A2E62040099788C /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB28DF192A2E62040099788C /* SignUpPresenterTests.swift */; };
@@ -317,6 +318,7 @@
 		CB1572322A2FA3A800ED22B5 /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1572372A2FA3A800ED22B5 /* SignUpViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTest.swift; sourceTree = "<group>"; };
 		CB1F226D2A411BDE00014989 /* userLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userLogin.swift; sourceTree = "<group>"; };
+		CB1F226F2A411E4E00014989 /* UserLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginModel.swift; sourceTree = "<group>"; };
 		CB222E6D2A27CB8E00F01870 /* AlamofireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterTests.swift; sourceTree = "<group>"; };
 		CB28DF0D2A2E62040099788C /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB28DF142A2E62040099788C /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -691,6 +693,7 @@
 			children = (
 				CB49234A2A22CED200541CA8 /* UserModel.swift */,
 				CB49236C2A22E0C000541CA8 /* Model.swift */,
+				CB1F226F2A411E4E00014989 /* UserLoginModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1490,6 +1493,7 @@
 				CB49236D2A22E0C000541CA8 /* Model.swift in Sources */,
 				CB4923492A22CDBF00541CA8 /* AddUser.swift in Sources */,
 				CB5CDAD22A241A3F007052DD /* DomainError.swift in Sources */,
+				CB1F22702A411E4E00014989 /* UserLoginModel.swift in Sources */,
 				CB49234B2A22CED200541CA8 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
