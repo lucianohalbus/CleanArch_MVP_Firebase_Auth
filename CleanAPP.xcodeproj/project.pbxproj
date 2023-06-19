@@ -606,18 +606,13 @@
 				CBC2541C2A28EAF3005C6F81 /* CI.xctestplan */,
 				CB4923422A22CD0F00541CA8 /* Domain */,
 				CB4923522A22CF4900541CA8 /* Data */,
-				CB49235C2A22CF4900541CA8 /* DataTests */,
 				CBDEDC6B2A27C735004908F6 /* Infra */,
-				CBDEDC752A27C735004908F6 /* InfraTests */,
-				CBC254222A290370005C6F81 /* UseCasesIntegrationTests */,
 				CB28DF0E2A2E62040099788C /* Presentation */,
-				CB28DF182A2E62040099788C /* PresentationTests */,
 				CB655B152A300055008D46DE /* UI */,
-				CB1572362A2FA3A800ED22B5 /* UITests */,
 				CB6C35712A310AEF00E4A68A /* Validation */,
-				CB6C357B2A310AEF00E4A68A /* ValidationTests */,
 				CB6C35992A31196800E4A68A /* Main */,
 				CB6C35B02A31196A00E4A68A /* MainTests */,
+				CBEDE6102A40F29D00C83022 /* Tests */,
 				CB4923332A22CC4E00541CA8 /* Products */,
 				CB4923662A22CF7500541CA8 /* Frameworks */,
 			);
@@ -900,6 +895,19 @@
 				CBC4CBB42A28E4D8007EC4C3 /* Http */,
 			);
 			path = InfraTests;
+			sourceTree = "<group>";
+		};
+		CBEDE6102A40F29D00C83022 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CB49235C2A22CF4900541CA8 /* DataTests */,
+				CBDEDC752A27C735004908F6 /* InfraTests */,
+				CB28DF182A2E62040099788C /* PresentationTests */,
+				CB6C357B2A310AEF00E4A68A /* ValidationTests */,
+				CB1572362A2FA3A800ED22B5 /* UITests */,
+				CBC254222A290370005C6F81 /* UseCasesIntegrationTests */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
