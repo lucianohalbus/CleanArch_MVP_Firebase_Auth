@@ -54,7 +54,7 @@ final class SignUpPresenterTests: XCTestCase {
         let addUserSpy = AddUserSpy()
         let sut = makeSut(addUser: addUserSpy)
         sut.signUp(signUpModel: makeSignUpViewModel())
-        XCTAssertEqual(addUserSpy.addUserModel, makeAddUserModel())
+        XCTAssertEqual(addUserSpy.addUserBody, makeAddUserBody())
     }
     
     func test_signUp_should_show_error_message_if_addUser_fails() {

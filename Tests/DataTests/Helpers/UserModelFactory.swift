@@ -11,8 +11,8 @@ func makeUserModel() -> UserModel {
     )
 }
 
-func makeAddUserModel() -> AddUserModel {
-    return AddUserModel(
+func makeAddUserBody() -> AddUserBody {
+    return AddUserBody(
         email: "any_email",
         password: "any_password",
         returnSecureToken: true

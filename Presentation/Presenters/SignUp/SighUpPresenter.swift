@@ -21,7 +21,7 @@ public final class SighUpPresenter {
             alertView.showMessage(viewModel: AlertModel(title: "Falha na Validação", message: message))
         } else {
             loadingView.display(viewModel: LoadingViewModel(isLoading: true))
-            addUser.add(addUserModel: SignUpMapper.toAddUserModel(viewModel: signUpModel)) { [weak self] result in
+            addUser.add(addUserBody: SignUpMapper.toAddUserBody(viewModel: signUpModel)) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
                 case .failure: self.alertView.showMessage(viewModel: AlertModel(title: "Error", message: "Algo inexperado aconteceu, tente novamente em alguns instantes."))

@@ -10,8 +10,8 @@ public final class RemoteAddUser: AddUser {
         self.httpClient = httpClient
     }
     
-    public func add(addUserModel: AddUserModel, completion: @escaping (Result<UserModel, DomainError>) -> Void) {
-        httpClient.post(to: url, with: addUserModel.toData()) { [weak self] result in
+    public func add(addUserBody: AddUserBody, completion: @escaping (Result<UserModel, DomainError>) -> Void) {
+        httpClient.post(to: url, with: addUserBody.toData()) { [weak self] result in
             guard self != nil else { return }
             switch result {
             case .success(let data):
