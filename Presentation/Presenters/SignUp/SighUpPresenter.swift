@@ -6,53 +6,41 @@ import Domain
 public final class SighUpPresenter {
     private let alertView: AlertView
     private let emailValidator: EmailValidator
-    private let addAccount: AddAccount
+    private let addUser: AddUser
     private let loadingView: LoadingView
     
-    public init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount, loadingView: LoadingView) {
+    public init(alertView: AlertView, emailValidator: EmailValidator, addUser: AddUser, loadingView: LoadingView) {
         self.alertView = alertView
         self.emailValidator = emailValidator
-        self.addAccount = addAccount
+        self.addUser = addUser
         self.loadingView = loadingView
     }
     
-    public func signUp(viewModel: SignUpViewModel) {
-        if let message = validate(viewModel: viewModel) {
-            alertView.showMessage(viewModel: AlertViewModel(title: "Falha na Validação", message: message))
+    public func signUp(signUpModel: SignUpModel) {
+        if let message = validate(signUpModel: signUpModel) {
+            alertView.showMessage(viewModel: AlertModel(title: "Falha na Validação", message: message))
         } else {
             loadingView.display(viewModel: LoadingViewModel(isLoading: true))
-            addAccount.add(addAccountModel: SignUpMapper.toAddAccountModel(viewModel: viewModel)) { [weak self] result in
+            addUser.add(addUserModel: SignUpMapper.toAddUserModel(viewModel: signUpModel)) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
-                case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "Algo inexperado aconteceu, tente novamente em alguns instantes."))
-                case .success: self.alertView.showMessage(viewModel: AlertViewModel(title: "Sucesso", message: "Conta criada com sucesso."))
+                case .failure: self.alertView.showMessage(viewModel: AlertModel(title: "Error", message: "Algo inexperado aconteceu, tente novamente em alguns instantes."))
+                case .success: self.alertView.showMessage(viewModel: AlertModel(title: "Sucesso", message: "Conta criada com sucesso."))
                 }
                 self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
             }
         }
     }
     
-    private func validate(viewModel: SignUpViewModel) -> String? {
-        if viewModel.name == nil || viewModel.name!.isEmpty {
-           return "O campo nome é obrigatório"
-        }
-        
-        if viewModel.email == nil || viewModel.email!.isEmpty {
+    private func validate(signUpModel: SignUpModel) -> String? {
+        if signUpModel.email == nil || signUpModel.email?.isEmpty ?? false {
             return "O campo email é obrigatório"
-        }
-        
-        if viewModel.password == nil || viewModel.password!.isEmpty {
-           return "O campo senha é obrigatório"
-        }
-        
-        if viewModel.passwordConfirmation == nil || viewModel.passwordConfirmation!.isEmpty {
-            return "O campo confirmar senha é obrigatório"
-        }
-        
-        if viewModel.password != viewModel.passwordConfirmation {
-            return "O campo confirmar senha é inválido"
-        } else if !emailValidator.isValid(email: viewModel.email ?? "") {
-            return "O campo Email é inválido"
+        } else if signUpModel.password == nil || signUpModel.password?.isEmpty ?? false {
+            return "O campo password é obrigatório"
+        } else if signUpModel.returnSecureToken == false {
+            return "O campo returnSecureToken é obrigatório"
+        } else if !emailValidator.isValid(email: signUpModel.email ?? "") {
+            return "Email inválido"
         }
         return nil
     }

@@ -1,24 +1,22 @@
-//
-
 import Foundation
 import Presentation
 
-func makeSignUpViewModel(name: String? = "any_name", email: String? = "any_email@mail.com", password: String? = "any_password", passwordConfirmation: String? = "any_password") -> SignUpViewModel {
-    return SignUpViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
+func makeSignUpViewModel(email: String? = "any_email", password: String? = "any_password", returnSecureToken: Bool = true) -> SignUpModel {
+    return SignUpModel(email: email, password: password, returnSecureToken: true)
 }
 
-func makeRequiredAlertViewModel(fieldName: String) -> AlertViewModel {
-    return AlertViewModel(title: "Falha na Validação", message: "O campo \(fieldName) é obrigatório")
+func makeRequiredAlertModel(fieldName: String) -> AlertModel {
+    return AlertModel(title: "Falha na Validação", message: "O campo \(fieldName) é obrigatório")
 }
 
-func makeInvalidAlertViewModel(fieldName: String) -> AlertViewModel {
-    return AlertViewModel(title: "Falha na Validação", message: "O campo \(fieldName) é inválido")
+func makeInvalidAlertModel(fieldName: String) -> AlertModel {
+    return AlertModel(title: "Falha na Validação", message: "\(fieldName) inválido")
 }
 
-func makeErrorAlertViewModel(message: String) -> AlertViewModel {
-    return AlertViewModel(title: "Error", message: message)
+func makeErrorAlertModel(message: String) -> AlertModel {
+    return AlertModel(title: "Error", message: message)
 }
 
-func makeSuccessAlertViewModel(message: String) -> AlertViewModel {
-    return AlertViewModel(title: "Sucesso", message: message)
+func makeSuccessAlertModel(message: String) -> AlertModel {
+    return AlertModel(title: "Sucesso", message: message)
 }

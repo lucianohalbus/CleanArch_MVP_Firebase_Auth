@@ -1,23 +1,21 @@
-//
-
 import XCTest
 import Domain
 import Data
 
-final class RemoteAddAccountTests: XCTestCase {
+final class RemoteAddUserTests: XCTestCase {
 
     func test_add_should_call_httpClient_with_corret_url() throws {
         let url: URL = makeURL()
         let (sut, httpClientSpy) = makeSut()
-        sut.add(addAccountModel: makeAddAccountModel()) { _ in }
+        sut.add(addUserModel: makeAddUserModel()) { _ in }
         XCTAssertEqual(httpClientSpy.urls, [url])
     }
     
     func test_add_should_call_httpClient_with_corret_data() throws {
         let (sut, httpClientSpy) = makeSut()
-        let addAccountModel: AddAccountModel = makeAddAccountModel()
-        sut.add(addAccountModel: addAccountModel) { _ in }
-        XCTAssertEqual(httpClientSpy.data, addAccountModel.toData())
+        let addAUserModel: AddUserModel = makeAddUserModel()
+        sut.add(addUserModel: addAUserModel) { _ in }
+        XCTAssertEqual(httpClientSpy.data, addAUserModel.toData())
     }
     
     func test_add_should_complete_with_error_if_client_complete_with_failure() throws {
@@ -27,11 +25,11 @@ final class RemoteAddAccountTests: XCTestCase {
         }
     }
     
-    func test_add_should_complete_with_account_if_client_complete_with_valid_data() throws {
+    func test_add_should_complete_with_user_if_client_complete_with_valid_data() throws {
         let (sut, httpClientSpy) = makeSut()
-        let expectedAccount = makeAccountModel()
-        expected(sut, completeWith: .success(expectedAccount)) {
-            httpClientSpy.completeWithData(expectedAccount.toData()!)
+        let expectedUser = makeUserModel()
+        expected(sut, completeWith: .success(expectedUser)) {
+            httpClientSpy.completeWithData(expectedUser.toData()!)
         }
     }
         
@@ -44,9 +42,9 @@ final class RemoteAddAccountTests: XCTestCase {
     
     func test_add_should_not_complete_if_sut_has_been_deallocated() throws {
         let httpClientSpy = HttpClientSpy()
-        var sut: RemoteAddAccount? = RemoteAddAccount(url: makeURL(), httpClient: httpClientSpy)
-        var result: Result<AccountModel, DomainError>?
-        sut?.add(addAccountModel: makeAddAccountModel()) { result = $0 }
+        var sut: RemoteAddUser? = RemoteAddUser(url: makeURL(), httpClient: httpClientSpy)
+        var result: Result<UserModel, DomainError>?
+        sut?.add(addUserModel: makeAddUserModel()) { result = $0 }
         sut = nil
         httpClientSpy.completeWithError(.noConnectivity)
         XCTAssertNil(result)
@@ -54,22 +52,22 @@ final class RemoteAddAccountTests: XCTestCase {
     }
 }
 
-extension RemoteAddAccountTests {
+extension RemoteAddUserTests {
     
-    func makeSut(url: URL = URL(string: "http://any-url.com")!, file: StaticString = #filePath, line: UInt = #line) -> (sut: RemoteAddAccount, httpClientSpy: HttpClientSpy) {
+    func makeSut(url: URL = URL(string: "http://any-url.com")!, file: StaticString = #filePath, line: UInt = #line) -> (sut: RemoteAddUser, httpClientSpy: HttpClientSpy) {
         let httpClientSpy = HttpClientSpy()
-        let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
+        let sut = RemoteAddUser(url: url, httpClient: httpClientSpy)
         checkMemoryLeak(for: sut, file: file, line: line)
         checkMemoryLeak(for: httpClientSpy, file: file, line: line)
         return (sut, httpClientSpy)
     }
 
-    func expected(_ sut: RemoteAddAccount, completeWith expectedResult: Result<AccountModel, DomainError>, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
+    func expected(_ sut: RemoteAddUser, completeWith expectedResult: Result<UserModel, DomainError>, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
         let exp = expectation(description: "waiting")
-        sut.add(addAccountModel: makeAddAccountModel()) { receivedResult in
+        sut.add(addUserModel: makeAddUserModel()) { receivedResult in
             switch (expectedResult, receivedResult) {
             case (.failure(let expectedError), .failure(let receivedError)): XCTAssertEqual(expectedError, receivedError, file: file, line: line)
-            case (.success(let expectedAccount), .success(let receivedAccount)): XCTAssertEqual(expectedAccount, receivedAccount, file: file, line: line)
+            case (.success(let expectedUser), .success(let receivedUser)): XCTAssertEqual(expectedUser, receivedUser, file: file, line: line)
             default: XCTFail("Expected \(expectedResult) received \(receivedResult) instead", file: file, line: line)
             }
             exp.fulfill()

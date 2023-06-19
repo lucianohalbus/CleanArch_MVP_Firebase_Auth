@@ -1,9 +1,7 @@
-//
-
 import Foundation
 import Domain
 
-public final class RemoteAddAccount: AddAccount {
+public final class RemoteAddUser: AddUser {
     private let url: URL
     private let httpClient: HttpPostClient
 
@@ -12,12 +10,12 @@ public final class RemoteAddAccount: AddAccount {
         self.httpClient = httpClient
     }
     
-    public func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
-        httpClient.post(to: url, with: addAccountModel.toData()) { [weak self] result in
+    public func add(addUserModel: AddUserModel, completion: @escaping (Result<UserModel, DomainError>) -> Void) {
+        httpClient.post(to: url, with: addUserModel.toData()) { [weak self] result in
             guard self != nil else { return }
             switch result {
             case .success(let data):
-                if let model: AccountModel = data?.toModel() {
+                if let model: UserModel = data?.toModel() {
                     completion(.success(model))
                 } else {
                     completion(.failure(.unexpected))

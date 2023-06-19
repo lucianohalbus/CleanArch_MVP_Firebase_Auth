@@ -3,10 +3,10 @@
 import Foundation
 
 public protocol AlertView {
-    func showMessage(viewModel: AlertViewModel)
+    func showMessage(viewModel: AlertModel)
 }
 
-public struct AlertViewModel: Equatable {
+public struct AlertModel: Equatable {
     public var title: String
     public var message: String
     
