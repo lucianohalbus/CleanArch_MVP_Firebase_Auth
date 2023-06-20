@@ -14,7 +14,8 @@ class SignUpFactory {
         let alamofireAdapter = AlamofireAdapter()
         let url = URL(string: "https://4974284e-263f-41ef-8564-2e907616483b.mock.pstmn.io/signuo")!
         let remoteAddUser = RemoteAddUser(url: url, httpClient: alamofireAdapter)
-        let presenter = SignUserPresenter(alertView: controller, emailValidator: emailValidatorAdapter, addUser: remoteAddUser, loadingView: controller)
+        let remoteUserLogin = RemoteUserLogin(url: url, httpClient: alamofireAdapter)
+        let presenter = SignUserPresenter(alertView: controller, emailValidator: emailValidatorAdapter, addUser: remoteAddUser, loadingView: controller, userLogin: remoteUserLogin)
         controller.signUp = presenter.signUp
         return controller
     }
