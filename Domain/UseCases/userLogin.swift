@@ -1,7 +1,7 @@
 import Foundation
 
-public protocol userLogin {
-    func login(userLoginBody: UserLoginBody, completion: @escaping (Result<UserModel, DomainError>) -> Void)
+public protocol UserLogin {
+    func login(userLoginBody: UserLoginBody, completion: @escaping (Result<UserLoginModel, DomainError>) -> Void)
 }
 
 public struct UserLoginBody: Model {

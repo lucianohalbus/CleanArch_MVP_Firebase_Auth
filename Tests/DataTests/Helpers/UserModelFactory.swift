@@ -18,3 +18,22 @@ func makeAddUserBody() -> AddUserBody {
         returnSecureToken: true
     )
 }
+
+func makeUserLoginModel() -> UserLoginModel {
+    return UserLoginModel(
+        localID: "any_local_id",
+        email: "any_name",
+        idToken: "any_id_token",
+        registered: false,
+        refreshToken: "any_refresh_token",
+        expiresIn: "any_expires_in"
+    )
+}
+
+func makeUserLoginBody() -> UserLoginBody {
+    return UserLoginBody(
+        email: "any_email",
+        password: "any_password",
+        returnSecureToken: true
+    )
+}
