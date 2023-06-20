@@ -46,9 +46,9 @@
 		CB4923712A22E21B00541CA8 /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4923702A22E21B00541CA8 /* HttpPostClient.swift */; };
 		CB5CDAD22A241A3F007052DD /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CDAD12A241A3E007052DD /* DomainError.swift */; };
 		CB5CDAD52A241C1B007052DD /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CDAD42A241C1B007052DD /* HttpError.swift */; };
-		CB655B172A3000FB008D46DE /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB655B162A3000FB008D46DE /* SignUp.storyboard */; };
-		CB655B1B2A30B82D008D46DE /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB655B162A3000FB008D46DE /* SignUp.storyboard */; };
-		CB6C35622A30EDB600E4A68A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C35612A30EDB600E4A68A /* SignUpViewController.swift */; };
+		CB655B172A3000FB008D46DE /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB655B162A3000FB008D46DE /* Sign.storyboard */; };
+		CB655B1B2A30B82D008D46DE /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB655B162A3000FB008D46DE /* Sign.storyboard */; };
+		CB6C35622A30EDB600E4A68A /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C35612A30EDB600E4A68A /* SignViewController.swift */; };
 		CB6C35652A30EE9D00E4A68A /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C35642A30EE9D00E4A68A /* TestExtensions.swift */; };
 		CB6C35682A30FF0000E4A68A /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C35672A30FF0000E4A68A /* UIViewControllerExtensions.swift */; };
 		CB6C356A2A31003200E4A68A /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C35692A31003200E4A68A /* Storyboarded.swift */; };
@@ -351,8 +351,8 @@
 		CB4923702A22E21B00541CA8 /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
 		CB5CDAD12A241A3E007052DD /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		CB5CDAD42A241C1B007052DD /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
-		CB655B162A3000FB008D46DE /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
-		CB6C35612A30EDB600E4A68A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CB655B162A3000FB008D46DE /* Sign.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sign.storyboard; sourceTree = "<group>"; };
+		CB6C35612A30EDB600E4A68A /* SignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		CB6C35642A30EE9D00E4A68A /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		CB6C35672A30FF0000E4A68A /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		CB6C35692A31003200E4A68A /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -763,8 +763,8 @@
 		CB655B202A30ECF5008D46DE /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				CB6C35612A30EDB600E4A68A /* SignUpViewController.swift */,
-				CB655B162A3000FB008D46DE /* SignUp.storyboard */,
+				CB6C35612A30EDB600E4A68A /* SignViewController.swift */,
+				CB655B162A3000FB008D46DE /* Sign.storyboard */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -1358,7 +1358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB655B172A3000FB008D46DE /* SignUp.storyboard in Resources */,
+				CB655B172A3000FB008D46DE /* Sign.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1366,7 +1366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB655B1B2A30B82D008D46DE /* SignUp.storyboard in Resources */,
+				CB655B1B2A30B82D008D46DE /* Sign.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1464,7 +1464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB6C35682A30FF0000E4A68A /* UIViewControllerExtensions.swift in Sources */,
-				CB6C35622A30EDB600E4A68A /* SignUpViewController.swift in Sources */,
+				CB6C35622A30EDB600E4A68A /* SignViewController.swift in Sources */,
 				CB6C356A2A31003200E4A68A /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import Presentation
 
-public final class SignUpViewController: UIViewController, Storyboarded {
+public final class SignViewController: UIViewController, Storyboarded {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
@@ -28,7 +28,7 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     }
 }
 
-extension SignUpViewController: LoadingView {
+extension SignViewController: LoadingView {
     public func display(viewModel: Presentation.LoadingViewModel) {
         if viewModel.isLoading {
             view.isUserInteractionEnabled = false
@@ -40,7 +40,7 @@ extension SignUpViewController: LoadingView {
     }
 }
 
-extension SignUpViewController: AlertView {
+extension SignViewController: AlertView {
     public func showMessage(viewModel: Presentation.AlertModel) {
         let alert = UIAlertController(title: viewModel.title, message: viewModel.message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default))

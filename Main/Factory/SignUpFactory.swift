@@ -6,8 +6,8 @@ import Data
 import Infra
 
 class SignUpFactory {
-    static func makeController() -> SignUpViewController {
-        let controller = SignUpViewController.instatiate()
+    static func makeController() -> SignViewController {
+        let controller = SignViewController.instatiate()
         let emailValidatorAdapter = EmailValidatorAdapter()
         let alamofireAdapter = AlamofireAdapter()
         let url = URL(string: "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]")!
