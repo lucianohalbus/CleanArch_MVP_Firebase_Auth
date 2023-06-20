@@ -7,15 +7,15 @@ final class RemoteUserLoginTests: XCTestCase {
     func test_login_should_call_httpClient_with_corret_url() throws {
         let url: URL = makeURL()
         let (sut, httpClientSpy) = makeSut()
-        sut.login(userLoginBody: makeUserLoginBody()) { _ in }
+        sut.login(userSignBody: makeUserSignBody()) { _ in }
         XCTAssertEqual(httpClientSpy.urls, [url])
     }
     
     func test_login_should_call_httpClient_with_corret_data() throws {
         let (sut, httpClientSpy) = makeSut()
-        let addUserBody: AddUserBody = makeAddUserBody()
-        sut.login(userLoginBody: makeUserLoginBody()) { _ in }
-        XCTAssertEqual(httpClientSpy.data, addUserBody.toData())
+        let userSignBody: UserSignBody = makeUserSignBody()
+        sut.login(userSignBody: makeUserSignBody()) { _ in }
+        XCTAssertEqual(httpClientSpy.data, userSignBody.toData())
     }
     
     func test_login_should_complete_with_error_if_client_complete_with_failure() throws {
@@ -44,7 +44,7 @@ final class RemoteUserLoginTests: XCTestCase {
         let httpClientSpy = HttpClientSpy()
         var sut: RemoteUserLogin? = RemoteUserLogin(url: makeURL(), httpClient: httpClientSpy)
         var result: Result<UserLoginModel, DomainError>?
-        sut?.login(userLoginBody: makeUserLoginBody()) { result = $0 }
+        sut?.login(userSignBody: makeUserSignBody()) { result = $0 }
         sut = nil
         httpClientSpy.completeWithError(.noConnectivity)
         XCTAssertNil(result)
@@ -63,7 +63,7 @@ extension RemoteUserLoginTests {
 
     func expected(_ sut: RemoteUserLogin, completeWith expectedResult: Result<UserLoginModel, DomainError>, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
         let exp = expectation(description: "waiting")
-        sut.login(userLoginBody: makeUserLoginBody()) { receivedResult in
+        sut.login(userSignBody: makeUserSignBody()) { receivedResult in
             switch (expectedResult, receivedResult) {
             case (.failure(let expectedError), .failure(let receivedError)): XCTAssertEqual(expectedError, receivedError, file: file, line: line)
             case (.success(let expectedUser), .success(let receivedUser)): XCTAssertEqual(expectedUser, receivedUser, file: file, line: line)

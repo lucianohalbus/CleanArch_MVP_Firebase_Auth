@@ -11,8 +11,8 @@ func makeUserModel() -> UserModel {
     )
 }
 
-func makeAddUserBody() -> AddUserBody {
-    return AddUserBody(
+func makeUserSignBody() -> UserSignBody {
+    return UserSignBody(
         email: "any_email",
         password: "any_password",
         returnSecureToken: true
@@ -27,13 +27,5 @@ func makeUserLoginModel() -> UserLoginModel {
         registered: false,
         refreshToken: "any_refresh_token",
         expiresIn: "any_expires_in"
-    )
-}
-
-func makeUserLoginBody() -> UserLoginBody {
-    return UserLoginBody(
-        email: "any_email",
-        password: "any_password",
-        returnSecureToken: true
     )
 }

@@ -10,8 +10,8 @@ public final class RemoteUserLogin: UserLogin {
         self.httpClient = httpClient
     }
     
-    public func login(userLoginBody: UserLoginBody, completion: @escaping (Result<UserLoginModel, DomainError>) -> Void) {
-        httpClient.post(to: url, with: userLoginBody.toData()) { [weak self] result in
+    public func login(userSignBody: UserSignBody, completion: @escaping (Result<UserLoginModel, DomainError>) -> Void) {
+        httpClient.post(to: url, with: userSignBody.toData()) { [weak self] result in
             guard self != nil else { return }
             switch result {
             case .success(let data):

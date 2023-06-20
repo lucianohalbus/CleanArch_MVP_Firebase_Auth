@@ -1,8 +1,8 @@
 import Foundation
 import Presentation
 
-func makeSignUpViewModel(email: String? = "any_email", password: String? = "any_password", returnSecureToken: Bool = true) -> SignUpModel {
-    return SignUpModel(email: email, password: password, returnSecureToken: true)
+func makeSignViewModel(email: String? = "any_email", password: String? = "any_password", returnSecureToken: Bool = true) -> SignModel {
+    return SignModel(email: email, password: password, returnSecureToken: true)
 }
 
 func makeRequiredAlertModel(fieldName: String) -> AlertModel {
