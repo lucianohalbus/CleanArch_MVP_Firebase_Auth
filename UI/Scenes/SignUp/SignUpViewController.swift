@@ -9,6 +9,7 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     @IBOutlet weak var passwordTextField: UITextField!
     
     public var signUp: ((SignModel) -> Void)?
+    public var signIn: ((SignModel) -> Void)?
     
     public override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,5 +1,3 @@
-//
-
 import Foundation
 import UI
 import Presentation
@@ -12,10 +10,9 @@ class SignUpFactory {
         let controller = SignUpViewController.instatiate()
         let emailValidatorAdapter = EmailValidatorAdapter()
         let alamofireAdapter = AlamofireAdapter()
-        let url = URL(string: "https://4974284e-263f-41ef-8564-2e907616483b.mock.pstmn.io/signuo")!
+        let url = URL(string: "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]")!
         let remoteAddUser = RemoteAddUser(url: url, httpClient: alamofireAdapter)
-        let remoteUserLogin = RemoteUserLogin(url: url, httpClient: alamofireAdapter)
-        let presenter = SignUserPresenter(alertView: controller, emailValidator: emailValidatorAdapter, addUser: remoteAddUser, loadingView: controller, userLogin: remoteUserLogin)
+        let presenter = SignUpUserPresenter(alertView: controller, emailValidator: emailValidatorAdapter, addUser: remoteAddUser, loadingView: controller)
         controller.signUp = presenter.signUp
         return controller
     }
