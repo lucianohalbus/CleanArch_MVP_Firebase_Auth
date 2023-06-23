@@ -11,16 +11,26 @@ func makeUserModel() -> UserModel {
     )
 }
 
-func makeUserSignBody() -> UserSignBody {
-    return UserSignBody(
+func makeAddUserBody() -> AddUserBody {
+    return AddUserBody(
+        nickName: "any_name",
         email: "any_email",
         password: "any_password",
+        passwordConfirmation: "any_password",
         returnSecureToken: true
     )
 }
 
-func makeUserLoginModel() -> UserLoginModel {
-    return UserLoginModel(
+func makeAuthenticationBody() -> AuthenticationBody {
+    AuthenticationBody(
+        email: "any_email",
+        password: "aney_password",
+        returnSecureToken: true
+    )
+}
+
+func makeUserAuthModel() -> UserAuthModel {
+    return UserAuthModel(
         localID: "any_local_id",
         email: "any_name",
         idToken: "any_id_token",

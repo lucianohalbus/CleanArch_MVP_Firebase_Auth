@@ -10,8 +10,8 @@ public final class RemoteAddUser: AddUser {
         self.httpClient = httpClient
     }
     
-    public func add(userSignBody: UserSignBody, completion: @escaping (Result<UserModel, DomainError>) -> Void) {
-        httpClient.post(to: url, with: userSignBody.toData()) { [weak self] result in
+    public func add(addUserBody: AddUserBody, completion: @escaping (AddUser.Result) -> Void) {
+        httpClient.post(to: url, with: addUserBody.toData()) { [weak self] result in
             guard self != nil else { return }
             switch result {
             case .success(let data):
@@ -20,7 +20,11 @@ public final class RemoteAddUser: AddUser {
                 } else {
                     completion(.failure(.unexpected))
                 }
-            case .failure: completion(.failure(.unexpected))
+            case .failure(let error):
+                switch error {
+                case .forbidden: completion(.failure(.emailInUse))
+                default: completion(.failure(.unexpected))
+                }
             }
         }
     }

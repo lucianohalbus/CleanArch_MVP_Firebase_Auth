@@ -1,6 +1,6 @@
 import Foundation
 
-public struct UserLoginModel: Model {
+public struct UserAuthModel: Model {
     let localID: String
     let email: String
     let idToken: String

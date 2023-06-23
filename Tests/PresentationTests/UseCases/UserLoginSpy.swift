@@ -1,11 +1,11 @@
 import Foundation
 import Domain
 
-class UserLoginSpy: UserLogin {
+class UserLoginSpy: UserAuth {
     var userSignBody: UserSignBody?
-    var completion: ((Result<UserLoginModel, DomainError>) -> Void)?
+    var completion: ((Result<UserAuthModel, DomainError>) -> Void)?
     
-    func login(userSignBody: UserSignBody, completion: @escaping (Result<UserLoginModel, DomainError>) -> Void) {
+    func login(userSignBody: UserSignBody, completion: @escaping (Result<UserAuthModel, DomainError>) -> Void) {
         self.userSignBody = userSignBody
         self.completion = completion
     }
@@ -14,7 +14,7 @@ class UserLoginSpy: UserLogin {
         completion?(.failure(error))
     }
     
-    func completeWithUser(_ user: UserLoginModel) {
+    func completeWithUser(_ user: UserAuthModel) {
         completion?(.success(user))
     }
 }

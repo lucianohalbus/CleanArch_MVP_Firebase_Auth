@@ -23,11 +23,11 @@ public final class SignUpUserPresenter {
             loadingView.display(viewModel: LoadingViewModel(isLoading: true))
             addUser.add(userSignBody: SignUpMapper.toUserSignBody(viewModel: signUpModel)) { [weak self] result in
                 guard let self = self else { return }
+                self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
                 switch result {
                 case .failure: self.alertView.showMessage(viewModel: AlertModel(title: "Error", message: "Algo inexperado aconteceu, tente novamente em alguns instantes."))
                 case .success: self.alertView.showMessage(viewModel: AlertModel(title: "Sucesso", message: "Conta criada com sucesso."))
                 }
-                self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
             }
         }
     }

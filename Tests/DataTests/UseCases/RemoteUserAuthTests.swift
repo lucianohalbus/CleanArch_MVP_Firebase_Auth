@@ -2,20 +2,20 @@ import XCTest
 import Domain
 import Data
 
-final class RemoteUserLoginTests: XCTestCase {
+final class RemoteUserAuthTests: XCTestCase {
 
-    func test_login_should_call_httpClient_with_corret_url() throws {
+    func test_auth_should_call_httpClient_with_corret_url() throws {
         let url: URL = makeURL()
         let (sut, httpClientSpy) = makeSut()
-        sut.login(userSignBody: makeUserSignBody()) { _ in }
+        sut.auth(authenticationBody: makeAuthenticationBody()) { _ in }
         XCTAssertEqual(httpClientSpy.urls, [url])
     }
     
     func test_login_should_call_httpClient_with_corret_data() throws {
         let (sut, httpClientSpy) = makeSut()
-        let userSignBody: UserSignBody = makeUserSignBody()
-        sut.login(userSignBody: makeUserSignBody()) { _ in }
-        XCTAssertEqual(httpClientSpy.data, userSignBody.toData())
+        let authenticationBody: AuthenticationBody = makeAuthenticationBody()
+        sut.auth(authenticationBody: authenticationBody) { _ in }
+        XCTAssertEqual(httpClientSpy.data, authenticationBody.toData())
     }
     
     func test_login_should_complete_with_error_if_client_complete_with_failure() throws {
@@ -27,7 +27,7 @@ final class RemoteUserLoginTests: XCTestCase {
     
     func test_login_should_complete_with_user_if_client_complete_with_valid_data() throws {
         let (sut, httpClientSpy) = makeSut()
-        let expectedUser = makeUserLoginModel()
+        let expectedUser = makeUserAuthModel()
         expected(sut, completeWith: .success(expectedUser)) {
             httpClientSpy.completeWithData(expectedUser.toData()!)
         }
@@ -43,15 +43,15 @@ final class RemoteUserLoginTests: XCTestCase {
     func test_login_should_not_complete_if_sut_has_been_deallocated() throws {
         let httpClientSpy = HttpClientSpy()
         var sut: RemoteUserLogin? = RemoteUserLogin(url: makeURL(), httpClient: httpClientSpy)
-        var result: Result<UserLoginModel, DomainError>?
-        sut?.login(userSignBody: makeUserSignBody()) { result = $0 }
+        var result: Result<UserAuthModel, DomainError>?
+        sut?.auth(authenticationBody: makeAuthenticationBody()) { result = $0 }
         sut = nil
         httpClientSpy.completeWithError(.noConnectivity)
         XCTAssertNil(result)
     }
 }
 
-extension RemoteUserLoginTests {
+extension RemoteUserAuthTests {
     
     func makeSut(url: URL = URL(string: "http://any-url.com")!, file: StaticString = #filePath, line: UInt = #line) -> (sut: RemoteUserLogin, httpClientSpy: HttpClientSpy) {
         let httpClientSpy = HttpClientSpy()
@@ -61,9 +61,9 @@ extension RemoteUserLoginTests {
         return (sut, httpClientSpy)
     }
 
-    func expected(_ sut: RemoteUserLogin, completeWith expectedResult: Result<UserLoginModel, DomainError>, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
+    func expected(_ sut: RemoteUserLogin, completeWith expectedResult: Result<UserAuthModel, DomainError>, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
         let exp = expectation(description: "waiting")
-        sut.login(userSignBody: makeUserSignBody()) { receivedResult in
+        sut.auth(authenticationBody: makeAuthenticationBody()) { receivedResult in
             switch (expectedResult, receivedResult) {
             case (.failure(let expectedError), .failure(let receivedError)): XCTAssertEqual(expectedError, receivedError, file: file, line: line)
             case (.success(let expectedUser), .success(let receivedUser)): XCTAssertEqual(expectedUser, receivedUser, file: file, line: line)

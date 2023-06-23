@@ -1,7 +1,7 @@
 import Foundation
 import Domain
 
-public final class RemoteUserLogin: UserLogin {
+public final class RemoteUserLogin: UserAuth {
     private let url: URL
     private let httpClient: HttpPostClient
 
@@ -10,17 +10,21 @@ public final class RemoteUserLogin: UserLogin {
         self.httpClient = httpClient
     }
     
-    public func login(userSignBody: UserSignBody, completion: @escaping (Result<UserLoginModel, DomainError>) -> Void) {
-        httpClient.post(to: url, with: userSignBody.toData()) { [weak self] result in
+    public func auth(authenticationBody: AuthenticationBody, completion: @escaping (UserAuth.Result) -> Void) {
+        httpClient.post(to: url, with: authenticationBody.toData()) { [weak self] result in
             guard self != nil else { return }
             switch result {
             case .success(let data):
-                if let model: UserLoginModel = data?.toModel() {
+                if let model: UserAuthModel = data?.toModel() {
                     completion(.success(model))
                 } else {
                     completion(.failure(.unexpected))
                 }
-            case .failure: completion(.failure(.unexpected))
+            case .failure(let error):
+                switch error {
+                case .unauthorized: completion(.failure(.expiredSession))
+                default: completion(.failure(.unexpected))
+                }
             }
         }
     }

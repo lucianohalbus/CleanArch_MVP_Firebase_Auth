@@ -7,9 +7,9 @@ public final class SignInUserPresenter {
     private let alertView: AlertView
     private let emailValidator: EmailValidator
     private let loadingView: LoadingView
-    private let userLogin: UserLogin
+    private let userLogin: UserAuth
     
-    public init(alertView: AlertView, emailValidator: EmailValidator, loadingView: LoadingView, userLogin: UserLogin) {
+    public init(alertView: AlertView, emailValidator: EmailValidator, loadingView: LoadingView, userLogin: UserAuth) {
         self.alertView = alertView
         self.emailValidator = emailValidator
         self.loadingView = loadingView
