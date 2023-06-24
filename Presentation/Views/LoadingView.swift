@@ -1,10 +1,10 @@
 import Foundation
 
 public protocol LoadingView {
-    func display(viewModel: LoadingViewModel)
+    func display(viewModel: LoadingModel)
 }
 
-public struct LoadingViewModel: Equatable {
+public struct LoadingModel: Equatable {
     public var isLoading: Bool
     
     public init(isLoading: Bool) {

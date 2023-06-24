@@ -4,13 +4,13 @@ import Foundation
 import Presentation
 
 class LoadingViewSpy: LoadingView {
-    var emit: ((LoadingViewModel) -> Void)?
+    var emit: ((LoadingModel) -> Void)?
     
-    func observe(completion: @escaping (LoadingViewModel) -> Void) {
+    func observe(completion: @escaping (LoadingModel) -> Void) {
         self.emit = completion
     }
     
-    func display(viewModel: LoadingViewModel) {
+    func display(viewModel: LoadingModel) {
         self.emit?(viewModel)
     }
 }

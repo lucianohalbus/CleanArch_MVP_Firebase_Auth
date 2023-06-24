@@ -8,8 +8,8 @@ public final class SignViewController: UIViewController, Storyboarded {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    public var signUp: ((SignModel) -> Void)?
-    public var signIn: ((SignModel) -> Void)?
+    public var signUp: ((LoginRequest) -> Void)?
+    public var signIn: ((LoginRequest) -> Void)?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +23,13 @@ public final class SignViewController: UIViewController, Storyboarded {
     }
     
     @objc private func saveButtonTapped() {
-        let viewModel = SignModel(email: emailTextField?.text, password: passwordTextField?.text, returnSecureToken: true)
+        let viewModel = LoginRequest(email: emailTextField?.text, password: passwordTextField?.text)
         signUp?(viewModel)
     }
 }
 
 extension SignViewController: LoadingView {
-    public func display(viewModel: Presentation.LoadingViewModel) {
+    public func display(viewModel: Presentation.LoadingModel) {
         if viewModel.isLoading {
             view.isUserInteractionEnabled = false
             loadingIndicator.startAnimating()

@@ -1,22 +1,10 @@
 import Foundation
 import Presentation
 
-func makeSignViewModel(email: String? = "any_email", password: String? = "any_password", returnSecureToken: Bool = true) -> SignModel {
-    return SignModel(email: email, password: password, returnSecureToken: true)
+func makeSignUpViewModel(nickName: String? = "any_name", email: String? = "any_email", password: String? = "any_password", passwordConfirmation: String? = "any_password") -> SignUpRequest {
+    return SignUpRequest(nickName: nickName, email: email, password: password, passwordConfirmation: passwordConfirmation, returnSecureToken: true)
 }
 
-func makeRequiredAlertModel(fieldName: String) -> AlertModel {
-    return AlertModel(title: "Falha na Validação", message: "O campo \(fieldName) é obrigatório")
-}
-
-func makeInvalidAlertModel(fieldName: String) -> AlertModel {
-    return AlertModel(title: "Falha na Validação", message: "\(fieldName) inválido")
-}
-
-func makeErrorAlertModel(message: String) -> AlertModel {
-    return AlertModel(title: "Error", message: message)
-}
-
-func makeSuccessAlertModel(message: String) -> AlertModel {
-    return AlertModel(title: "Sucesso", message: message)
+func makeLoginViewModel(email: String? = "any_email", password: String? = "any_password") -> LoginRequest {
+    return LoginRequest(email: email, password: password)
 }

@@ -12,7 +12,7 @@ class SignInFactory {
         let alamofireAdapter = AlamofireAdapter()
         let url = URL(string: "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]")!
         let remoteUserLogin = RemoteUserLogin(url: url, httpClient: alamofireAdapter)
-        let presenter = SignInUserPresenter(alertView: controller, emailValidator: emailValidatorAdapter, loadingView: controller, userLogin: remoteUserLogin)
+        let presenter = LoginPresenter(alertView: controller, emailValidator: emailValidatorAdapter, loadingView: controller, userLogin: remoteUserLogin)
         controller.signIn = presenter.signIn
         return controller
     }
