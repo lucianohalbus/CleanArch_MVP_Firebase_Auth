@@ -11,7 +11,7 @@ final class SignUpUserPresenterTests: XCTestCase {
         XCTAssertEqual(addUserSpy.addUserBody, makeAddUserBody())
     }
     
-    func test_signUp_should_show_error_message_if_addAccount_fails() {
+    func test_signUp_should_show_error_message_if_addUser_fails() {
         let alertViewSpy = AlertViewSpy()
         let addUserSpy = AddUserSpy()
         let sut = makeSut(alertView: alertViewSpy, addUser: addUserSpy)
@@ -25,7 +25,7 @@ final class SignUpUserPresenterTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
     
-    func test_signUp_should_show_email_in_use_if_addAccount_returns_forbidden() {
+    func test_signUp_should_show_email_in_use_if_addUser_returns_forbidden() {
         let alertViewSpy = AlertViewSpy()
         let addUserSpy = AddUserSpy()
         let sut = makeSut(alertView: alertViewSpy, addUser: addUserSpy)
@@ -39,7 +39,7 @@ final class SignUpUserPresenterTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
     
-    func test_signUp_should_show_success_message_if_addAccount_succeeds() {
+    func test_signUp_should_show_success_message_if_addUser_succeeds() {
         let alertViewSpy = AlertViewSpy()
         let addUserSpy = AddUserSpy()
         let sut = makeSut(alertView: alertViewSpy, addUser: addUserSpy)
@@ -53,7 +53,7 @@ final class SignUpUserPresenterTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
     
-    func test_signUp_should_show_loading_before_and_after_addAccount() {
+    func test_signUp_should_show_loading_before_and_after_addUser() {
         let loadingViewSpy = LoadingViewSpy()
         let addUserSpy = AddUserSpy()
         let sut = makeSut(addUser: addUserSpy, loadingView: loadingViewSpy)
@@ -97,8 +97,8 @@ final class SignUpUserPresenterTests: XCTestCase {
 }
 
 extension SignUpUserPresenterTests {
-    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), addUser: AddUserSpy = AddUserSpy(), loadingView: LoadingViewSpy = LoadingViewSpy(), validation: ValidationSpy = ValidationSpy(), file: StaticString = #file, line: UInt = #line) -> SignUpUserPresenter {
-        let sut = SignUpUserPresenter(validation: validation, alertView: alertView, addUser: addUser, loadingView: loadingView)
+    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), addUser: AddUserSpy = AddUserSpy(), loadingView: LoadingViewSpy = LoadingViewSpy(), validation: ValidationSpy = ValidationSpy(), file: StaticString = #file, line: UInt = #line) -> SighUpPresenter {
+        let sut = SighUpPresenter(validation: validation, alertView: alertView, addUser: addUser, loadingView: loadingView)
         checkMemoryLeak(for: sut, file: file, line: line)
         return sut
     }

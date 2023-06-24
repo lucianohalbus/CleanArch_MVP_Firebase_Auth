@@ -10,8 +10,8 @@ public struct LoginRequest: Model {
         self.password = password
     }
     
-    public func toAuthenticationBody() -> AuthenticationBody {
-        return AuthenticationBody(email: self.email!, password: self.password!, returnSecureToken: true)
+    public func toUserAuthBody() -> UserAuthBody {
+        return UserAuthBody(email: self.email!, password: self.password!, returnSecureToken: true)
     }
 }
 

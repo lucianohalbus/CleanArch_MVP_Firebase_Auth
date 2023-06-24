@@ -21,8 +21,8 @@ func makeAddUserBody() -> AddUserBody {
     )
 }
 
-func makeAuthenticationBody() -> AuthenticationBody {
-    AuthenticationBody(
+func makeUserAuthBody() -> UserAuthBody {
+    UserAuthBody(
         email: "any_email",
         password: "any_password",
         returnSecureToken: true

@@ -3,7 +3,7 @@
 import Foundation
 import Domain
 
-public final class SignUpUserPresenter {
+public final class SighUpPresenter {
     private let validation: Validation
     private let alertView: AlertView
     private let addUser: AddUser

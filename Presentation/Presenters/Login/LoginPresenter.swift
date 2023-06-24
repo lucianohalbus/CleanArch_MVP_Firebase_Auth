@@ -21,7 +21,7 @@ public final class LoginPresenter {
             alertView.showMessage(viewModel: AlertModel(title: "Falha na Validação", message: message))
         } else {
             loadingView.display(viewModel: LoadingModel(isLoading: true))
-            userAuth.auth(authenticationBody: viewModel.toAuthenticationBody()) { [weak self] result in
+            userAuth.auth(userAuthBody: viewModel.toUserAuthBody()) { [weak self] result in
                 guard let self = self else { return }
                 self.loadingView.display(viewModel: LoadingModel(isLoading: false))
                 switch result {

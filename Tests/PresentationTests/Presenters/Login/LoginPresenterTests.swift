@@ -22,7 +22,7 @@ final class LoginPresenterTests: XCTestCase {
         let userAuthSpy = UserAuthSpy()
         let sut = makeSut(userAuth: userAuthSpy)
         sut.login(viewModel: makeLoginViewModel())
-        XCTAssertEqual(userAuthSpy.authenticationBody, makeAuthenticationBody())
+        XCTAssertEqual(userAuthSpy.userAuthBody, makeUserAuthBody())
     }
 
     func test_login_should_call_validation_with_correct_values() {

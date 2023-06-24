@@ -2,11 +2,11 @@ import Foundation
 import Domain
 
 class UserAuthSpy: UserAuth {
-    var authenticationBody: AuthenticationBody?
+    var userAuthBody: UserAuthBody?
     var completion: ((UserAuth.Result) -> Void)?
     
-    func auth(authenticationBody: AuthenticationBody, completion: @escaping (UserAuth.Result) -> Void) {
-        self.authenticationBody = authenticationBody
+    func auth(userAuthBody: UserAuthBody, completion: @escaping (UserAuth.Result) -> Void) {
+        self.userAuthBody = userAuthBody
         self.completion = completion
     }
     

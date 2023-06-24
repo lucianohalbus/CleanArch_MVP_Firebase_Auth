@@ -10,8 +10,8 @@ public final class RemoteUserLogin: UserAuth {
         self.httpClient = httpClient
     }
     
-    public func auth(authenticationBody: AuthenticationBody, completion: @escaping (UserAuth.Result) -> Void) {
-        httpClient.post(to: url, with: authenticationBody.toData()) { [weak self] result in
+    public func auth(userAuthBody: UserAuthBody, completion: @escaping (UserAuth.Result) -> Void) {
+        httpClient.post(to: url, with: userAuthBody.toData()) { [weak self] result in
             guard self != nil else { return }
             switch result {
             case .success(let data):
