@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="Y6W-OH-hqX" userLabel="Welcome" customClass="WelcomeViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="zM6-u2-vbP" userLabel="Logo">
+                                <rect key="frame" x="147" y="96" width="120" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Xfx-f8-ckZ"/>
+                                    <constraint firstAttribute="height" constant="90" id="i97-wa-JnG"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDm-Yp-1za" userLabel="Separator">
+                                <rect key="frame" x="32" y="234" width="350" height="1"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="V0J-mS-a5o"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEJA BEM -VINDO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXH-SL-jzX" userLabel="Title">
+                                <rect key="frame" x="32" y="283" width="350" height="259"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KZ-16-ime" userLabel="Login Button">
+                                <rect key="frame" x="28" y="542" width="374" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9GC-t9-nuG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DED-dh-Wxm" userLabel="SignUp Button">
+                                <rect key="frame" x="28" y="626" width="374" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="yVy-Dm-fz1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="CRIAR CONTA">
+                                    <color key="titleColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.83921568627450982" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="DED-dh-Wxm" firstAttribute="top" secondItem="3KZ-16-ime" secondAttribute="bottom" constant="24" id="0EZ-5I-Ih5"/>
+                            <constraint firstItem="3KZ-16-ime" firstAttribute="top" secondItem="TXH-SL-jzX" secondAttribute="bottom" id="1HK-k1-xqS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DED-dh-Wxm" secondAttribute="trailing" constant="12" id="4AK-oZ-eEj"/>
+                            <constraint firstItem="zM6-u2-vbP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="48" id="D9P-I8-aIw"/>
+                            <constraint firstItem="TXH-SL-jzX" firstAttribute="leading" secondItem="bDm-Yp-1za" secondAttribute="leading" id="GZ3-SS-AGw"/>
+                            <constraint firstItem="TXH-SL-jzX" firstAttribute="top" secondItem="bDm-Yp-1za" secondAttribute="bottom" constant="48" id="K7p-pC-nsu"/>
+                            <constraint firstItem="DED-dh-Wxm" firstAttribute="trailing" secondItem="3KZ-16-ime" secondAttribute="trailing" id="QWt-n6-XPC"/>
+                            <constraint firstItem="TXH-SL-jzX" firstAttribute="trailing" secondItem="bDm-Yp-1za" secondAttribute="trailing" id="RjB-dY-Z5p"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bDm-Yp-1za" secondAttribute="trailing" constant="32" id="Tjb-DF-z0u"/>
+                            <constraint firstItem="bDm-Yp-1za" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="WCy-9c-xLc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="DED-dh-Wxm" secondAttribute="bottom" constant="176" id="fsj-yR-KCV"/>
+                            <constraint firstItem="DED-dh-Wxm" firstAttribute="leading" secondItem="3KZ-16-ime" secondAttribute="leading" id="geZ-g8-2Tv"/>
+                            <constraint firstItem="bDm-Yp-1za" firstAttribute="top" secondItem="zM6-u2-vbP" secondAttribute="bottom" constant="48" id="jDO-mF-TAI"/>
+                            <constraint firstItem="zM6-u2-vbP" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="rpq-uz-xxM"/>
+                            <constraint firstItem="DED-dh-Wxm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="28" id="yxu-qz-ojw"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="loginButton" destination="3KZ-16-ime" id="zZa-Ho-Ogl"/>
+                        <outlet property="signUpButton" destination="DED-dh-Wxm" id="emF-Pm-LeD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="4.8913043478260869"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="1306" height="1049"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
