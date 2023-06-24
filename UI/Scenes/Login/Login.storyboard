@@ -96,6 +96,7 @@
                         <outlet property="emailTextField" destination="xZF-HM-nOD" id="jtV-uq-xn0"/>
                         <outlet property="loadingIndicator" destination="eoW-MG-DrW" id="fv3-jX-Wnf"/>
                         <outlet property="loginButton" destination="3KZ-16-ime" id="7hD-6b-FiW"/>
+                        <outlet property="logoImage" destination="zM6-u2-vbP" id="jF4-fU-SyQ"/>
                         <outlet property="passwordTextField" destination="kBZ-zr-KkP" id="Ev4-Uo-L1h"/>
                     </connections>
                 </viewController>

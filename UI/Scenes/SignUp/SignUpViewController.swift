@@ -9,6 +9,7 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmationTextField: UITextField!
+    @IBOutlet weak var logoImage: UIImageView!
     
     public var signUp: ((SignUpRequest) -> Void)?
     
@@ -23,6 +24,7 @@ public final class SignUpViewController: UIViewController, Storyboarded {
         saveButton?.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
         hideKeyboardOnTap()
         loadingIndicator.color = Color.primaryDark
+        logoImage.makeRounded()
     }
     
     @objc private func saveButtonTapped() {

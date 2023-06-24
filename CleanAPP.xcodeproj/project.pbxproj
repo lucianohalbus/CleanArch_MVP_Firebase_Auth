@@ -95,6 +95,7 @@
 		CB68DF892A47869D00D11FB4 /* TestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1572242A2F9F5E00ED22B5 /* TestFactory.swift */; };
 		CB68DF8B2A47907600D11FB4 /* AddUserSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB15721F2A2F9E8000ED22B5 /* AddUserSpy.swift */; };
 		CB68DF8C2A47917700D11FB4 /* UserAuthSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB60599A2A466B320005BA7D /* UserAuthSpy.swift */; };
+		CB68DF8E2A47965900D11FB4 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF8D2A47965900D11FB4 /* UIImageViewExtensions.swift */; };
 		CB6C35652A30EE9D00E4A68A /* TestUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C35642A30EE9D00E4A68A /* TestUIExtensions.swift */; };
 		CB6C35682A30FF0000E4A68A /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C35672A30FF0000E4A68A /* UIViewControllerExtensions.swift */; };
 		CB6C356A2A31003200E4A68A /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C35692A31003200E4A68A /* Storyboarded.swift */; };
@@ -433,6 +434,7 @@
 		CB68DF802A4784F400D11FB4 /* RemoteAddAccountFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountFactory.swift; sourceTree = "<group>"; };
 		CB68DF852A47863600D11FB4 /* LoginControllerFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControllerFactoryTests.swift; sourceTree = "<group>"; };
 		CB68DF862A47863600D11FB4 /* SignUpControllerFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpControllerFactoryTests.swift; sourceTree = "<group>"; };
+		CB68DF8D2A47965900D11FB4 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		CB6C35642A30EE9D00E4A68A /* TestUIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIExtensions.swift; sourceTree = "<group>"; };
 		CB6C35672A30FF0000E4A68A /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		CB6C35692A31003200E4A68A /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -1076,6 +1078,7 @@
 				CB6C35692A31003200E4A68A /* Storyboarded.swift */,
 				CB68DF3E2A477AF700D11FB4 /* UIColorExtensions.swift */,
 				CB68DF402A477B0000D11FB4 /* Color.swift */,
+				CB68DF8D2A47965900D11FB4 /* UIImageViewExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1759,6 +1762,7 @@
 				CB68DF412A477B0000D11FB4 /* Color.swift in Sources */,
 				CB68DF462A477B5A00D11FB4 /* NavigationController.swift in Sources */,
 				CB68DF512A477DF200D11FB4 /* LoginViewController.swift in Sources */,
+				CB68DF8E2A47965900D11FB4 /* UIImageViewExtensions.swift in Sources */,
 				CB68DF3F2A477AF700D11FB4 /* UIColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

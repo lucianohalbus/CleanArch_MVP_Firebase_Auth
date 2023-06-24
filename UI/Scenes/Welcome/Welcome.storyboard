@@ -30,33 +30,33 @@
                                     <constraint firstAttribute="height" constant="1" id="V0J-mS-a5o"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEJA BEM -VINDO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXH-SL-jzX" userLabel="Title">
-                                <rect key="frame" x="32" y="283" width="350" height="259"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firebase" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXH-SL-jzX" userLabel="Title">
+                                <rect key="frame" x="32" y="243" width="350" height="299"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.44610688025210093" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KZ-16-ime" userLabel="Login Button">
-                                <rect key="frame" x="28" y="542" width="374" height="60"/>
+                                <rect key="frame" x="28" y="542" width="358" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="9GC-t9-nuG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="LOGIN">
+                                <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DED-dh-Wxm" userLabel="SignUp Button">
-                                <rect key="frame" x="28" y="626" width="374" height="60"/>
+                                <rect key="frame" x="28" y="626" width="358" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="yVy-Dm-fz1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="CRIAR CONTA">
+                                <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -65,13 +65,13 @@
                         <color key="backgroundColor" red="0.97254901960784312" green="0.83921568627450982" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="DED-dh-Wxm" firstAttribute="top" secondItem="3KZ-16-ime" secondAttribute="bottom" constant="24" id="0EZ-5I-Ih5"/>
+                            <constraint firstItem="3KZ-16-ime" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="1Gt-E8-c2z"/>
                             <constraint firstItem="3KZ-16-ime" firstAttribute="top" secondItem="TXH-SL-jzX" secondAttribute="bottom" id="1HK-k1-xqS"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DED-dh-Wxm" secondAttribute="trailing" constant="12" id="4AK-oZ-eEj"/>
+                            <constraint firstItem="TXH-SL-jzX" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="27m-bj-3lh"/>
                             <constraint firstItem="zM6-u2-vbP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="48" id="D9P-I8-aIw"/>
-                            <constraint firstItem="TXH-SL-jzX" firstAttribute="leading" secondItem="bDm-Yp-1za" secondAttribute="leading" id="GZ3-SS-AGw"/>
-                            <constraint firstItem="TXH-SL-jzX" firstAttribute="top" secondItem="bDm-Yp-1za" secondAttribute="bottom" constant="48" id="K7p-pC-nsu"/>
+                            <constraint firstItem="TXH-SL-jzX" firstAttribute="top" secondItem="bDm-Yp-1za" secondAttribute="bottom" constant="8" id="K7p-pC-nsu"/>
                             <constraint firstItem="DED-dh-Wxm" firstAttribute="trailing" secondItem="3KZ-16-ime" secondAttribute="trailing" id="QWt-n6-XPC"/>
-                            <constraint firstItem="TXH-SL-jzX" firstAttribute="trailing" secondItem="bDm-Yp-1za" secondAttribute="trailing" id="RjB-dY-Z5p"/>
+                            <constraint firstItem="TXH-SL-jzX" firstAttribute="trailing" secondItem="bDm-Yp-1za" secondAttribute="trailing" id="SMW-sK-Lqw"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bDm-Yp-1za" secondAttribute="trailing" constant="32" id="Tjb-DF-z0u"/>
                             <constraint firstItem="bDm-Yp-1za" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="WCy-9c-xLc"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="DED-dh-Wxm" secondAttribute="bottom" constant="176" id="fsj-yR-KCV"/>
@@ -84,7 +84,9 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="loginButton" destination="3KZ-16-ime" id="zZa-Ho-Ogl"/>
+                        <outlet property="logoImage" destination="zM6-u2-vbP" id="3lP-zV-ZMV"/>
                         <outlet property="signUpButton" destination="DED-dh-Wxm" id="emF-Pm-LeD"/>
+                        <outlet property="titleLabel" destination="TXH-SL-jzX" id="NtJ-r8-M1L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

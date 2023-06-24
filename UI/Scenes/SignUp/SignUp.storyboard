@@ -114,6 +114,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="xZF-HM-nOD" id="BvV-yH-8qr"/>
                         <outlet property="loadingIndicator" destination="eoW-MG-DrW" id="GGD-QC-tt2"/>
+                        <outlet property="logoImage" destination="zM6-u2-vbP" id="7a2-sd-Mtc"/>
                         <outlet property="nameTextField" destination="LnI-iq-kaE" id="eM1-UZ-t49"/>
                         <outlet property="passwordConfirmationTextField" destination="sA1-ED-OXd" id="kxO-hK-gan"/>
                         <outlet property="passwordTextField" destination="kBZ-zr-KkP" id="ttF-VX-pJ2"/>

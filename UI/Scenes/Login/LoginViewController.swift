@@ -7,6 +7,7 @@ public final class LoginViewController: UIViewController, Storyboarded {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var logoImage: UIImageView!
     
     public var login: ((LoginRequest) -> Void)?
     
@@ -21,6 +22,7 @@ public final class LoginViewController: UIViewController, Storyboarded {
         loginButton?.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         hideKeyboardOnTap()
         loadingIndicator.color = Color.primaryDark
+        logoImage.makeRounded()
     }
     
     @objc private func loginButtonTapped() {
