@@ -7,6 +7,6 @@ func makeRemoteAddUser() -> AddUser {
 }
 
 func makeRemoteAddUserWith(httpClient: HttpPostClient) -> AddUser {
-    let remoteAddUser = RemoteAddUser(url: makeApiUrl(path: "signuo"), httpClient: httpClient)
+    let remoteAddUser = RemoteAddUser(url: makeApiUrl(path: "accounts:signUp?key="), httpClient: httpClient)
     return MainQueueDispatchDecorator(remoteAddUser)
 }

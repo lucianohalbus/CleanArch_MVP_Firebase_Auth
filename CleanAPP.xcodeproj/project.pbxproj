@@ -89,7 +89,7 @@
 		CB68DF7C2A4784D600D11FB4 /* WellcomeControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF792A4784D600D11FB4 /* WellcomeControllerFactory.swift */; };
 		CB68DF812A4784F400D11FB4 /* ApiUrlFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF7E2A4784F400D11FB4 /* ApiUrlFactory.swift */; };
 		CB68DF822A4784F400D11FB4 /* RemoteAuthenticationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF7F2A4784F400D11FB4 /* RemoteAuthenticationFactory.swift */; };
-		CB68DF832A4784F400D11FB4 /* RemoteAddAccountFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF802A4784F400D11FB4 /* RemoteAddAccountFactory.swift */; };
+		CB68DF832A4784F400D11FB4 /* RemoteAddUserFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF802A4784F400D11FB4 /* RemoteAddUserFactory.swift */; };
 		CB68DF872A47863600D11FB4 /* LoginControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF852A47863600D11FB4 /* LoginControllerFactoryTests.swift */; };
 		CB68DF882A47863600D11FB4 /* SignUpControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF862A47863600D11FB4 /* SignUpControllerFactoryTests.swift */; };
 		CB68DF892A47869D00D11FB4 /* TestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1572242A2F9F5E00ED22B5 /* TestFactory.swift */; };
@@ -98,6 +98,8 @@
 		CB68DF8E2A47965900D11FB4 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF8D2A47965900D11FB4 /* UIImageViewExtensions.swift */; };
 		CB68DF8F2A47C42100D11FB4 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6C35702A310AEF00E4A68A /* Validation.framework */; };
 		CB68DF902A47C42100D11FB4 /* Validation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB6C35702A310AEF00E4A68A /* Validation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB68DF952A47CD8E00D11FB4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CB68DF942A47CD8E00D11FB4 /* FirebaseAuth */; };
+		CB68DF972A47CDB800D11FB4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB68DF962A47CDB800D11FB4 /* GoogleService-Info.plist */; };
 		CB6C35652A30EE9D00E4A68A /* TestUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C35642A30EE9D00E4A68A /* TestUIExtensions.swift */; };
 		CB6C35682A30FF0000E4A68A /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C35672A30FF0000E4A68A /* UIViewControllerExtensions.swift */; };
 		CB6C356A2A31003200E4A68A /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C35692A31003200E4A68A /* Storyboarded.swift */; };
@@ -441,10 +443,11 @@
 		CB68DF792A4784D600D11FB4 /* WellcomeControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellcomeControllerFactory.swift; sourceTree = "<group>"; };
 		CB68DF7E2A4784F400D11FB4 /* ApiUrlFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUrlFactory.swift; sourceTree = "<group>"; };
 		CB68DF7F2A4784F400D11FB4 /* RemoteAuthenticationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationFactory.swift; sourceTree = "<group>"; };
-		CB68DF802A4784F400D11FB4 /* RemoteAddAccountFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountFactory.swift; sourceTree = "<group>"; };
+		CB68DF802A4784F400D11FB4 /* RemoteAddUserFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAddUserFactory.swift; sourceTree = "<group>"; };
 		CB68DF852A47863600D11FB4 /* LoginControllerFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControllerFactoryTests.swift; sourceTree = "<group>"; };
 		CB68DF862A47863600D11FB4 /* SignUpControllerFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpControllerFactoryTests.swift; sourceTree = "<group>"; };
 		CB68DF8D2A47965900D11FB4 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		CB68DF962A47CDB800D11FB4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB6C35642A30EE9D00E4A68A /* TestUIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIExtensions.swift; sourceTree = "<group>"; };
 		CB6C35672A30FF0000E4A68A /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		CB6C35692A31003200E4A68A /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -511,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB6C35912A31123B00E4A68A /* Alamofire in Frameworks */,
+				CB68DF952A47CD8E00D11FB4 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1059,7 +1063,7 @@
 			isa = PBXGroup;
 			children = (
 				CB68DF7E2A4784F400D11FB4 /* ApiUrlFactory.swift */,
-				CB68DF802A4784F400D11FB4 /* RemoteAddAccountFactory.swift */,
+				CB68DF802A4784F400D11FB4 /* RemoteAddUserFactory.swift */,
 				CB68DF7F2A4784F400D11FB4 /* RemoteAuthenticationFactory.swift */,
 			);
 			path = Http;
@@ -1128,6 +1132,7 @@
 				CB6C35A32A31196900E4A68A /* Assets.xcassets */,
 				CB6C35A52A31196900E4A68A /* LaunchScreen.storyboard */,
 				CB6C35A82A31196900E4A68A /* Info.plist */,
+				CB68DF962A47CDB800D11FB4 /* GoogleService-Info.plist */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1373,6 +1378,7 @@
 			name = Domain;
 			packageProductDependencies = (
 				CB6C35902A31123B00E4A68A /* Alamofire */,
+				CB68DF942A47CD8E00D11FB4 /* FirebaseAuth */,
 			);
 			productName = Domain;
 			productReference = CB4923412A22CD0F00541CA8 /* Domain.framework */;
@@ -1628,6 +1634,7 @@
 			mainGroup = CB4923282A22CC4E00541CA8;
 			packageReferences = (
 				CB6C358F2A31123B00E4A68A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CB68DF932A47CD8E00D11FB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = CB4923332A22CC4E00541CA8 /* Products */;
 			projectDirPath = "";
@@ -1725,6 +1732,7 @@
 			files = (
 				CB68DF6D2A47849200D11FB4 /* Release.xcconfig in Resources */,
 				CB6C35A72A31196900E4A68A /* LaunchScreen.storyboard in Resources */,
+				CB68DF972A47CDB800D11FB4 /* GoogleService-Info.plist in Resources */,
 				CB6C35A42A31196900E4A68A /* Assets.xcassets in Resources */,
 				CB68DF6C2A47849200D11FB4 /* Debug.xcconfig in Resources */,
 			);
@@ -1896,7 +1904,7 @@
 				CB68DF702A47849D00D11FB4 /* WeakVarProxy.swift in Sources */,
 				CB68DF812A4784F400D11FB4 /* ApiUrlFactory.swift in Sources */,
 				CB68DF6E2A47849200D11FB4 /* Environment.swift in Sources */,
-				CB68DF832A4784F400D11FB4 /* RemoteAddAccountFactory.swift in Sources */,
+				CB68DF832A4784F400D11FB4 /* RemoteAddUserFactory.swift in Sources */,
 				CB68DF682A47847F00D11FB4 /* MainQueueDispatchDecorator.swift in Sources */,
 				CB68DF7A2A4784D600D11FB4 /* SingUpControllerFactory.swift in Sources */,
 				CB68DF762A4784C800D11FB4 /* AlamofireAdapterFactory.swift in Sources */,
@@ -3159,6 +3167,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CB68DF932A47CD8E00D11FB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 		CB6C358F2A31123B00E4A68A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -3170,6 +3186,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CB68DF942A47CD8E00D11FB4 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB68DF932A47CD8E00D11FB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
 		CB6C35902A31123B00E4A68A /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CB6C358F2A31123B00E4A68A /* XCRemoteSwiftPackageReference "Alamofire" */;

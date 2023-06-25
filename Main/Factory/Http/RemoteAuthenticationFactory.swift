@@ -7,6 +7,6 @@ func makeRemoteAuthentication() -> UserAuth {
 }
 
 func makeRemoteAuthenticationWith(httpClient: HttpPostClient) -> UserAuth {
-    let remoteUserLogin = RemoteUserLogin(url: makeApiUrl(path: "login"), httpClient: httpClient)
+    let remoteUserLogin = RemoteUserLogin(url: makeApiUrl(path: "accounts:signInWithPassword?key="), httpClient: httpClient)
     return MainQueueDispatchDecorator(remoteUserLogin)
 }
