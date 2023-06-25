@@ -11,7 +11,7 @@ public final class RequiredFieldValidation: Validation, Equatable {
     }
     
     public func validate(data: [String : Any]?) -> String? {
-        guard let fieldName = data?[fieldName] as? String, !fieldName.isEmpty else { return "O campo \(fieldLabel) é obrigatório"}
+        guard let fieldName = data?[fieldName] as? String, !fieldName.isEmpty else { return "Please, enter a valid \(fieldLabel)"}
         return nil
     }
     

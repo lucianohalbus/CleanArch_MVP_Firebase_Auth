@@ -13,7 +13,7 @@ public final class CompareFieldsValidation: Validation, Equatable {
     }
     
     public func validate(data: [String : Any]?) -> String? {
-        guard let fieldName = data?[fieldName] as? String, let fieldNameToCompare = data?[fieldNameToCompare] as? String, fieldName == fieldNameToCompare  else { return "O campo \(fieldLabel) é inválido" }
+        guard let fieldName = data?[fieldName] as? String, let fieldNameToCompare = data?[fieldNameToCompare] as? String, fieldName == fieldNameToCompare  else { return "Invalid \(fieldLabel)" }
         return nil
     }
     

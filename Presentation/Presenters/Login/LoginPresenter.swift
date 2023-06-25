@@ -18,7 +18,7 @@ public final class LoginPresenter {
     
     public func login(viewModel: LoginRequest) {
         if let message = validation.validate(data: viewModel.toJson()) {
-            alertView.showMessage(viewModel: AlertModel(title: "Falha na Validação", message: message))
+            alertView.showMessage(viewModel: AlertModel(title: "Validation Fails", message: message))
         } else {
             loadingView.display(viewModel: LoadingModel(isLoading: true))
             userAuth.auth(userAuthBody: viewModel.toUserAuthBody()) { [weak self] result in
@@ -28,11 +28,11 @@ public final class LoginPresenter {
                 case .failure(let error):
                     let errorMessage: String!
                     switch error {
-                    case .expiredSession: errorMessage = "Email e/ou senha inválidos."
-                    default: errorMessage = "Algo inexperado aconteceu, tente novamente em alguns instantes."
+                    case .expiredSession: errorMessage = "Invalid email or password"
+                    default: errorMessage = "Something unexpected happened. Please try again"
                     }
                     self.alertView.showMessage(viewModel: AlertModel(title: "Error", message: errorMessage))
-                case .success: self.alertView.showMessage(viewModel: AlertModel(title: "Sucesso", message: "Login feito com sucesso."))
+                case .success: self.alertView.showMessage(viewModel: AlertModel(title: "Success", message: "Login Successfully"))
                 }
             }
         }

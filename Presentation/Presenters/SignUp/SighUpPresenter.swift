@@ -18,7 +18,7 @@ public final class SighUpPresenter {
     
     public func signUp(viewModel: SignUpRequest) {
         if let message = validation.validate(data: viewModel.toJson()) {
-            alertView.showMessage(viewModel: AlertModel(title: "Falha na Validação", message: message))
+            alertView.showMessage(viewModel: AlertModel(title: "Validation Fails", message: message))
         } else {
             loadingView.display(viewModel: LoadingModel(isLoading: true))
             addUser.add(addUserBody: viewModel.toAddUserBody()) { [weak self] result in
@@ -28,11 +28,11 @@ public final class SighUpPresenter {
                 case .failure(let error):
                     let errorMessage: String!
                     switch error {
-                    case .emailInUse: errorMessage = "Este email já está em uso."
-                    default: errorMessage = "Algo inexperado aconteceu, tente novamente em alguns instantes."
+                    case .emailInUse: errorMessage = "This email is already in use"
+                    default: errorMessage = "Something unexpected happened. Please try again"
                     }
                     self.alertView.showMessage(viewModel: AlertModel(title: "Error", message: errorMessage))
-                case .success: self.alertView.showMessage(viewModel: AlertModel(title: "Sucesso", message: "Conta criada com sucesso."))
+                case .success: self.alertView.showMessage(viewModel: AlertModel(title: "Success", message: "Sign Up Successfully"))
                 }
             }
         }

@@ -13,7 +13,7 @@ public final class EmailValidation: Validation, Equatable {
     }
     
     public func validate(data: [String : Any]?) -> String? {
-        guard let fieldValue = data?[fieldName] as? String, emailValidator.isValid(email: fieldValue) else { return "O campo \(fieldLabel) é inválido"}
+        guard let fieldValue = data?[fieldName] as? String, emailValidator.isValid(email: fieldValue) else { return "Invalid \(fieldLabel)"}
         return nil
     }
     

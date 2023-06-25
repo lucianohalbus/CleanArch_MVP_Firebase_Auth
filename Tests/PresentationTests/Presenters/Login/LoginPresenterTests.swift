@@ -10,7 +10,7 @@ final class LoginPresenterTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy, validation: validationSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { viewModel in
-            XCTAssertEqual(viewModel, AlertModel(title: "Falha na Validação", message: "Erro"))
+            XCTAssertEqual(viewModel, AlertModel(title: "Validation Fails", message: "Erro"))
             exp.fulfill()
         }
         validationSpy.simulateError()
@@ -39,7 +39,7 @@ final class LoginPresenterTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy, userAuth: userAuthSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { viewModel in
-            XCTAssertEqual(viewModel, AlertModel(title: "Error", message: "Algo inexperado aconteceu, tente novamente em alguns instantes."))
+            XCTAssertEqual(viewModel, AlertModel(title: "Error", message: "Something unexpected happened. Please try again"))
             exp.fulfill()
         }
         sut.login(viewModel: makeLoginViewModel())
@@ -53,7 +53,7 @@ final class LoginPresenterTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy, userAuth: userAuthSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { viewModel in
-            XCTAssertEqual(viewModel, AlertModel(title: "Error", message: "Email e/ou senha inválidos."))
+            XCTAssertEqual(viewModel, AlertModel(title: "Error", message: "Invalid email or password"))
             exp.fulfill()
         }
         sut.login(viewModel: makeLoginViewModel())
@@ -67,7 +67,7 @@ final class LoginPresenterTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy, userAuth: userAuthSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { viewModel in
-            XCTAssertEqual(viewModel, AlertModel(title: "Sucesso", message: "Login feito com sucesso."))
+            XCTAssertEqual(viewModel, AlertModel(title: "Success", message: "Login Successfully"))
             exp.fulfill()
         }
         sut.login(viewModel: makeLoginViewModel())

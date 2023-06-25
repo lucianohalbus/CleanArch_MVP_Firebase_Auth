@@ -17,7 +17,7 @@ final class SignUpUserPresenterTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy, addUser: addUserSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { viewModel in
-            XCTAssertEqual(viewModel, AlertModel(title: "Error", message: "Algo inexperado aconteceu, tente novamente em alguns instantes."))
+            XCTAssertEqual(viewModel, AlertModel(title: "Error", message: "Something unexpected happened. Please try again"))
             exp.fulfill()
         }
         sut.signUp(viewModel: makeSignUpViewModel())
@@ -31,7 +31,7 @@ final class SignUpUserPresenterTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy, addUser: addUserSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { viewModel in
-            XCTAssertEqual(viewModel, AlertModel(title: "Error", message: "Este email já está em uso."))
+            XCTAssertEqual(viewModel, AlertModel(title: "Error", message: "This email is already in use"))
             exp.fulfill()
         }
         sut.signUp(viewModel: makeSignUpViewModel())
@@ -45,7 +45,7 @@ final class SignUpUserPresenterTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy, addUser: addUserSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { viewModel in
-            XCTAssertEqual(viewModel, AlertModel(title: "Sucesso", message: "Conta criada com sucesso."))
+            XCTAssertEqual(viewModel, AlertModel(title: "Success", message: "Sign Up Successfully"))
             exp.fulfill()
         }
         sut.signUp(viewModel: makeSignUpViewModel())
@@ -87,7 +87,7 @@ final class SignUpUserPresenterTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy, validation: validationSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { viewModel in
-            XCTAssertEqual(viewModel, AlertModel(title: "Falha na Validação", message: "Erro"))
+            XCTAssertEqual(viewModel, AlertModel(title: "Validation Fails", message: "Erro"))
             exp.fulfill()
         }
         validationSpy.simulateError()

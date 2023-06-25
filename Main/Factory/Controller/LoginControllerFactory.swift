@@ -18,5 +18,5 @@ public func makeLoginControllerWith(userAuth: UserAuth) -> LoginViewController {
 
 public func makeLoginValidations() -> [Validation] {
     return ValidationBuilder.field("email").label("Email").required().email().build() +
-    ValidationBuilder.field("password").label("Senha").required().build()
+    ValidationBuilder.field("password").label("Password").required().build()
 }

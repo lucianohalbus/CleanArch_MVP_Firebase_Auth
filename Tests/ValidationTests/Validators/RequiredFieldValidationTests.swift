@@ -6,13 +6,13 @@ class RequiredFieldValidationTests: XCTestCase {
     func test_signUp_should_return_error_if_field_is_not_provider() {
         let sut = makeSut(fieldName: "email", fieldLabel: "Email")
         let errorMessage = sut.validate(data: ["name": "any_name"])
-        XCTAssertEqual(errorMessage, "O campo Email é obrigatório")
+        XCTAssertEqual(errorMessage, "Please, enter a valid Email")
     }
     
     func test_signUp_should_return_error_with_correct_fieldLabel() {
-        let sut = makeSut(fieldName: "email", fieldLabel: "idade")
+        let sut = makeSut(fieldName: "email", fieldLabel: "age")
         let errorMessage = sut.validate(data: ["name": "any_name"])
-        XCTAssertEqual(errorMessage, "O campo idade é obrigatório")
+        XCTAssertEqual(errorMessage, "Please, enter a valid age")
     }
     
     func test_signUp_should_return_nil_if_field_is_provider() {
@@ -24,7 +24,7 @@ class RequiredFieldValidationTests: XCTestCase {
     func test_signUp_should_return_nil_if_no_data_is_provider() {
         let sut = makeSut(fieldName: "email", fieldLabel: "Email")
         let errorMessage = sut.validate(data: nil)
-        XCTAssertEqual(errorMessage, "O campo Email é obrigatório")
+        XCTAssertEqual(errorMessage, "Please, enter a valid Email")
     }
 }
 

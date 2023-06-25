@@ -9,7 +9,7 @@ class EmailValidationTests: XCTestCase {
         let sut = makeSut(fieldName: "email", fieldLabel: "Email", emailValidator: emailValidationSpy)
         emailValidationSpy.simulateInvalidEmail()
         let errorMessage = sut.validate(data: ["email": "invalid_email@gmail.com"])
-        XCTAssertEqual(errorMessage, "O campo Email é inválido")
+        XCTAssertEqual(errorMessage, "Invalid Email")
     }
     
     func test_validate_should_return_error_with_correct_fieldLabel() {
@@ -17,7 +17,7 @@ class EmailValidationTests: XCTestCase {
         let sut = makeSut(fieldName: "email", fieldLabel: "Email2", emailValidator: emailValidationSpy)
         emailValidationSpy.simulateInvalidEmail()
         let errorMessage = sut.validate(data: ["email": "invalid_email@gmail.com"])
-        XCTAssertEqual(errorMessage, "O campo Email2 é inválido")
+        XCTAssertEqual(errorMessage, "Invalid Email2")
     }
     
     func test_validate_should_return_nil_if_valid_email_is_provider() {
@@ -29,7 +29,7 @@ class EmailValidationTests: XCTestCase {
     func test_validate_should_return_nil_if_no_data_is_providers() {
         let sut = makeSut(fieldName: "email", fieldLabel: "Email", emailValidator: EmailValidatorSpy())
         let errorMessage = sut.validate(data: nil)
-        XCTAssertEqual(errorMessage, "O campo Email é inválido")
+        XCTAssertEqual(errorMessage, "Invalid Email")
     }
 }
 

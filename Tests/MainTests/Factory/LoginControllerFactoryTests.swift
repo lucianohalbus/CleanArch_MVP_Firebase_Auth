@@ -21,7 +21,7 @@ final class LoginControllerFactoryTests: XCTestCase {
         let validation = makeLoginValidations()
         XCTAssertEqual(validation[0] as! RequiredFieldValidation, RequiredFieldValidation(fieldName: "email", fieldLabel: "Email"))
         XCTAssertEqual(validation[1] as! EmailValidation, EmailValidation(fieldName: "email", fieldLabel: "Email", emailValidator: EmailValidatorSpy()))
-        XCTAssertEqual(validation[2] as! RequiredFieldValidation, RequiredFieldValidation(fieldName: "password", fieldLabel: "Senha"))
+        XCTAssertEqual(validation[2] as! RequiredFieldValidation, RequiredFieldValidation(fieldName: "password", fieldLabel: "Password"))
     }
 }
 
