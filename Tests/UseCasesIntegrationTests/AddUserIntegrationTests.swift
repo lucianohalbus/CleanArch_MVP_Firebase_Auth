@@ -9,7 +9,7 @@ class AddUserIntegrationTests: XCTestCase {
         let alamofireAdapter = AlamofireAdapter()
         let url = URL(string: "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[FIREBASE_API_KEY]")!
         let sut = RemoteAddUser(url: url, httpClient: alamofireAdapter)
-        let addUserBody = AddUserBody(nickName: "nickname", email: "testEmail", password: "012345", passwordConfirmation: "012345", returnSecureToken: true)
+        let addUserBody = AddUserBody(email: "testEmail", password: "012345", returnSecureToken: true)
         let exp = expectation(description: "waiting")
         sut.add(addUserBody: addUserBody)  { result in
             switch result {

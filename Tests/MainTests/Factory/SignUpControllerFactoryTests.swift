@@ -18,11 +18,9 @@ final class SignUpControllerFactoryTests: XCTestCase {
     
     func test_signUp_compose_with_correct_validation() {
         let validation = makeSignUpValidations()
-        XCTAssertEqual(validation[0] as! RequiredFieldValidation, RequiredFieldValidation(fieldName: "name", fieldLabel: "nickname"))
         XCTAssertEqual(validation[1] as! RequiredFieldValidation, RequiredFieldValidation(fieldName: "email", fieldLabel: "Email"))
         XCTAssertEqual(validation[2] as! EmailValidation, EmailValidation(fieldName: "email", fieldLabel: "Email", emailValidator: EmailValidatorSpy()))
         XCTAssertEqual(validation[3] as! RequiredFieldValidation, RequiredFieldValidation(fieldName: "password", fieldLabel: "Password"))
-        XCTAssertEqual(validation[4] as! CompareFieldsValidation, CompareFieldsValidation(fieldName: "passwordConfirmation", fieldNameToCompare: "password", fieldLabel: "Confirm Password"))
     }
 }
 

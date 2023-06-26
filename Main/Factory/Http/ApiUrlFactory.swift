@@ -1,5 +1,14 @@
 import Foundation
 
 func makeApiUrl(path: String) -> URL {
-    return URL(string: "\(Environment.variable(.apiBaseUrl))/\(path)\(Environment.variable(.apiKey))")!
+    let environment: EnvironmentVar = .debug
+    let key = environment.firebaseApiKey
+    print("key key \(key)")
+    let url = URL(string: "\(environment.path.firebaseApiBaseUrl)\(path)\(key)")!
+    
+    
+print("zico path \(url)")
+
+
+    return url
 }

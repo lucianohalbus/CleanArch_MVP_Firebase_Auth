@@ -83,7 +83,7 @@
 		CB68DF682A47847F00D11FB4 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF672A47847F00D11FB4 /* MainQueueDispatchDecorator.swift */; };
 		CB68DF6C2A47849200D11FB4 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB68DF692A47849200D11FB4 /* Debug.xcconfig */; };
 		CB68DF6D2A47849200D11FB4 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB68DF6A2A47849200D11FB4 /* Release.xcconfig */; };
-		CB68DF6E2A47849200D11FB4 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF6B2A47849200D11FB4 /* Environment.swift */; };
+		CB68DF6E2A47849200D11FB4 /* EnvironmentVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF6B2A47849200D11FB4 /* EnvironmentVar.swift */; };
 		CB68DF702A47849D00D11FB4 /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF6F2A47849D00D11FB4 /* WeakVarProxy.swift */; };
 		CB68DF752A4784C800D11FB4 /* EmailValidatorAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF732A4784C800D11FB4 /* EmailValidatorAdapterFactory.swift */; };
 		CB68DF762A4784C800D11FB4 /* AlamofireAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF742A4784C800D11FB4 /* AlamofireAdapterFactory.swift */; };
@@ -437,7 +437,7 @@
 		CB68DF672A47847F00D11FB4 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		CB68DF692A47849200D11FB4 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		CB68DF6A2A47849200D11FB4 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
-		CB68DF6B2A47849200D11FB4 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		CB68DF6B2A47849200D11FB4 /* EnvironmentVar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentVar.swift; sourceTree = "<group>"; };
 		CB68DF6F2A47849D00D11FB4 /* WeakVarProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
 		CB68DF732A4784C800D11FB4 /* EmailValidatorAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapterFactory.swift; sourceTree = "<group>"; };
 		CB68DF742A4784C800D11FB4 /* AlamofireAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterFactory.swift; sourceTree = "<group>"; };
@@ -1029,7 +1029,7 @@
 			isa = PBXGroup;
 			children = (
 				CB68DF692A47849200D11FB4 /* Debug.xcconfig */,
-				CB68DF6B2A47849200D11FB4 /* Environment.swift */,
+				CB68DF6B2A47849200D11FB4 /* EnvironmentVar.swift */,
 				CB68DF6A2A47849200D11FB4 /* Release.xcconfig */,
 			);
 			path = Env;
@@ -1910,7 +1910,7 @@
 				CB6C359B2A31196800E4A68A /* AppDelegate.swift in Sources */,
 				CB68DF702A47849D00D11FB4 /* WeakVarProxy.swift in Sources */,
 				CB68DF812A4784F400D11FB4 /* ApiUrlFactory.swift in Sources */,
-				CB68DF6E2A47849200D11FB4 /* Environment.swift in Sources */,
+				CB68DF6E2A47849200D11FB4 /* EnvironmentVar.swift in Sources */,
 				CB68DF832A4784F400D11FB4 /* RemoteAddUserFactory.swift in Sources */,
 				CB68DF682A47847F00D11FB4 /* MainQueueDispatchDecorator.swift in Sources */,
 				CB68DF7A2A4784D600D11FB4 /* SingUpControllerFactory.swift in Sources */,
