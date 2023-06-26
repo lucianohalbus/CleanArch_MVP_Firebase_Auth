@@ -13,10 +13,8 @@ func makeUserModel() -> UserModel {
 
 func makeAddUserBody() -> AddUserBody {
     return AddUserBody(
-        nickName: "any_name",
         email: "any_email",
         password: "any_password",
-        passwordConfirmation: "any_password",
         returnSecureToken: true
     )
 }

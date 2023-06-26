@@ -4,11 +4,9 @@ import Presentation
 
 public final class SignUpViewController: UIViewController, Storyboarded {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var passwordConfirmationTextField: UITextField!
     @IBOutlet weak var logoImage: UIImageView!
     
     public var signUp: ((SignUpRequest) -> Void)?
@@ -20,16 +18,16 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     
     private func configure() {
         title = "4Fun"
-        saveButton?.layer.cornerRadius = 5
-        saveButton?.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+        signUpButton?.layer.cornerRadius = 5
+        signUpButton?.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         hideKeyboardOnTap()
         loadingIndicator.color = Color.primaryDark
         logoImage.makeRounded()
     }
     
-    @objc private func saveButtonTapped() {
+    @objc private func signUpButtonTapped() {
 
-        let viewModel = SignUpRequest(nickName: nameTextField?.text, email: emailTextField?.text, password: passwordTextField?.text, passwordConfirmation: passwordConfirmationTextField?.text) 
+        let viewModel = SignUpRequest(email: emailTextField?.text, password: passwordTextField?.text, returnSecureToken: true) 
         signUp?(viewModel)
     }
 }

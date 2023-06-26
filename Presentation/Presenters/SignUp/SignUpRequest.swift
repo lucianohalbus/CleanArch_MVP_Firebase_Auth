@@ -17,6 +17,6 @@ public struct SignUpRequest: Model {
     }
     
     public func toAddUserBody() -> AddUserBody {
-        return AddUserBody(nickName: self.nickName!, email: self.email!, password: self.password!, passwordConfirmation: self.passwordConfirmation!, returnSecureToken: true)
+        return AddUserBody(email: self.email!, password: self.password!, returnSecureToken: true)
     }
 }
