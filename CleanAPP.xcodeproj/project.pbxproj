@@ -38,6 +38,7 @@
 		CB49236D2A22E0C000541CA8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB49236C2A22E0C000541CA8 /* Model.swift */; };
 		CB49236F2A22E13A00541CA8 /* RemoteAddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB49236E2A22E13A00541CA8 /* RemoteAddUser.swift */; };
 		CB4923712A22E21B00541CA8 /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4923702A22E21B00541CA8 /* HttpPostClient.swift */; };
+		CB4D48FA2A4A72EC00ACAE29 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB4D48F92A4A72EC00ACAE29 /* GoogleService-Info.plist */; };
 		CB5CDAD22A241A3F007052DD /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CDAD12A241A3E007052DD /* DomainError.swift */; };
 		CB5CDAD52A241C1B007052DD /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CDAD42A241C1B007052DD /* HttpError.swift */; };
 		CB6059922A46657A0005BA7D /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB28DF312A2E70700099788C /* EmailValidator.swift */; };
@@ -396,6 +397,7 @@
 		CB49236C2A22E0C000541CA8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CB49236E2A22E13A00541CA8 /* RemoteAddUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddUser.swift; sourceTree = "<group>"; };
 		CB4923702A22E21B00541CA8 /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
+		CB4D48F92A4A72EC00ACAE29 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB5CDAD12A241A3E007052DD /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		CB5CDAD42A241C1B007052DD /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		CB6059932A4665A10005BA7D /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
@@ -1126,6 +1128,7 @@
 				CB6C35A32A31196900E4A68A /* Assets.xcassets */,
 				CB6C35A52A31196900E4A68A /* LaunchScreen.storyboard */,
 				CB6C35A82A31196900E4A68A /* Info.plist */,
+				CB4D48F92A4A72EC00ACAE29 /* GoogleService-Info.plist */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1728,6 +1731,7 @@
 			files = (
 				CB6C35A72A31196900E4A68A /* LaunchScreen.storyboard in Resources */,
 				CB6C35A42A31196900E4A68A /* Assets.xcassets in Resources */,
+				CB4D48FA2A4A72EC00ACAE29 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
