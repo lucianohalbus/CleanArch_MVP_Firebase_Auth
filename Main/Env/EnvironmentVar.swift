@@ -1,16 +1,5 @@
 import Foundation
 
-public final class Environment {
-    public enum EnvironmentVar: String {
-        case apiBaseUrl = "API_BASE_URL"
-        case apiKey = "API_KEY"
-    }
-    
-    public static func variable(_ key: EnvironmentVar) -> String {
-        return Bundle.main.infoDictionary?[key.rawValue] as! String
-    }
-}
-
 public enum EnvironmentVar {
 
     case debug
@@ -60,10 +49,11 @@ public enum EnvironmentVar {
     }()
     
     var firebaseApiKey: String {
-        guard let key: String = EnvironmentVar.infoDictionary[self.keys.firebaseApiKey] as? String else {
+        
+        guard let apiKey: String = ProcessInfo.processInfo.environment["FIREBASE_API_KEY"] else {
             debugPrint("Error when getting FIREBASE API KEY")
             return ""
         }
-        return key
+        return apiKey
     }
 }
