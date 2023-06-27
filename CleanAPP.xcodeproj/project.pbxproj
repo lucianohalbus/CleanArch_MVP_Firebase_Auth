@@ -79,8 +79,6 @@
 		CB68DF602A4780D900D11FB4 /* SignUpViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF5F2A4780D900D11FB4 /* SignUpViewControllerTest.swift */; };
 		CB68DF662A47847800D11FB4 /* ValidationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF652A47847800D11FB4 /* ValidationBuilder.swift */; };
 		CB68DF682A47847F00D11FB4 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF672A47847F00D11FB4 /* MainQueueDispatchDecorator.swift */; };
-		CB68DF6C2A47849200D11FB4 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB68DF692A47849200D11FB4 /* Debug.xcconfig */; };
-		CB68DF6D2A47849200D11FB4 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB68DF6A2A47849200D11FB4 /* Release.xcconfig */; };
 		CB68DF6E2A47849200D11FB4 /* EnvironmentVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF6B2A47849200D11FB4 /* EnvironmentVar.swift */; };
 		CB68DF702A47849D00D11FB4 /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF6F2A47849D00D11FB4 /* WeakVarProxy.swift */; };
 		CB68DF752A4784C800D11FB4 /* EmailValidatorAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68DF732A4784C800D11FB4 /* EmailValidatorAdapterFactory.swift */; };
@@ -432,8 +430,6 @@
 		CB68DF5F2A4780D900D11FB4 /* SignUpViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTest.swift; sourceTree = "<group>"; };
 		CB68DF652A47847800D11FB4 /* ValidationBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationBuilder.swift; sourceTree = "<group>"; };
 		CB68DF672A47847F00D11FB4 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
-		CB68DF692A47849200D11FB4 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		CB68DF6A2A47849200D11FB4 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		CB68DF6B2A47849200D11FB4 /* EnvironmentVar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentVar.swift; sourceTree = "<group>"; };
 		CB68DF6F2A47849D00D11FB4 /* WeakVarProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
 		CB68DF732A4784C800D11FB4 /* EmailValidatorAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapterFactory.swift; sourceTree = "<group>"; };
@@ -1025,9 +1021,7 @@
 		CB68DF632A4783AB00D11FB4 /* Env */ = {
 			isa = PBXGroup;
 			children = (
-				CB68DF692A47849200D11FB4 /* Debug.xcconfig */,
 				CB68DF6B2A47849200D11FB4 /* EnvironmentVar.swift */,
-				CB68DF6A2A47849200D11FB4 /* Release.xcconfig */,
 			);
 			path = Env;
 			sourceTree = "<group>";
@@ -1732,10 +1726,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB68DF6D2A47849200D11FB4 /* Release.xcconfig in Resources */,
 				CB6C35A72A31196900E4A68A /* LaunchScreen.storyboard in Resources */,
 				CB6C35A42A31196900E4A68A /* Assets.xcassets in Resources */,
-				CB68DF6C2A47849200D11FB4 /* Debug.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
